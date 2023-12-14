@@ -1,4 +1,4 @@
---getAllClasses - list of all current classes available 
+--get list of all current faculty 
 CREATE PROC getFacultyList AS 
 (
 	SELECT Vperson.title + ' ' + Vperson.firstname +  ' ' + Vperson.lastname AS [name], title
