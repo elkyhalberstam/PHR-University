@@ -1,0 +1,16 @@
+--add person 
+ALTER PROC addPerson(@firstName varchar (15),
+					  @lastName varchar (15),
+					  @middleIn char,
+					  @title varchar(15),
+					  @suffix varchar(15),
+					  @email varchar (254)) 
+AS 
+
+	INSERT INTO person (firstName, lastName, middleIn, title, suffix,email)
+	Values ( @firstName,@lastName,@middleIn,@title,@suffix,@email) 
+
+
+exec addPerson 'chana', 'person','b', 'mrs.', 'esq', 'chana@gmail.com'
+
+SELECT * from person
