@@ -1,0 +1,12 @@
+--add course to schedule 
+CREATE PROC addCourse (@name varchar (45),
+				       @department varchar (30), 
+					   @creditsApplied int)
+AS 
+
+	INSERT INTO course (name, department, creditsApplied)
+	Values (@name, @department, @creditsApplied)
+
+exec addCourse 'Humanities', 'Core', 3
+
+SELECT * FROM course 
