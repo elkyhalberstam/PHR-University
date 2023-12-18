@@ -1,0 +1,16 @@
+-- get Gradebook stored procedure 
+ALTER PROC getTeacherGradebook (@teacherID int) AS 
+(
+	SELECT Vteacher.teacherID,
+			Vperson.firstname +  ' ' + Vperson.lastname AS [name],
+			VstudentClassList.classID,
+			VstudentClassList.studentID,
+			grades
+	FROM Vteacher 
+	JOIN Vperson ON Vperson.personID = Vteacher.personID 
+	JOIN Vclass ON Vteacher.teacherID = Vclass.teacherID
+	JOIN VstudentClassList ON VstudentClassList.classID = Vclass.classID
+	WHERE Vteacher.teacherID = @teacherID
+)
+
+exec getTeacherGradebook 3
