@@ -1,0 +1,21 @@
+--getlocationList
+--For every location (ie Main Campus) get a list of classes happening in that building 
+
+ALTER PROC getLocationList (@classID int)
+AS 
+(
+	SELECT Vclass.classID,
+		   Vcourse.name, 
+		   Vcourse.department, 
+		   Vroom.location, 
+		   Vroom.floorNum ,
+		   Vroom.roomNum,
+		   Vroom.roomType, 
+		   Vroom.capacity
+	FROM Vclass
+	JOIN Vcourse ON Vclass.courseID = Vcourse.courseID
+	JOIN Vroom ON Vclass.roomID = Vroom.roomID
+	WHERE Vclass.classID = @classID
+)
+
+EXEC getLocationList 3
