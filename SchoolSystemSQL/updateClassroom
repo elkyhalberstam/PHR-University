@@ -1,0 +1,9 @@
+--update the database to assign the specified class to the specified room
+CREATE PROC updateClassroom (@classID int, @roomID int)
+AS
+	UPDATE class
+	SET class.roomID = @roomID
+	WHERE class.classID = @classID
+
+SELECT * FROM class 
+exec updateClassroom 3, 3
