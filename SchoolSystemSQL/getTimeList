@@ -1,0 +1,18 @@
+--getTimeList for a class, get all the information about its timing 
+
+ALTER PROC getTimeList (@classID int) AS
+(
+	SELECT Vclass.classID,
+		   Vcourse.name, 
+		   Vcourse.department, 
+		   Vtime.days,
+		   Vtime.duration, 
+		   [Start Time] = Convert(Time(0),Vtime.startTime,0),
+		   [End Time] = Convert(Time(0),Vtime.endTime,0)
+	FROM Vclass
+	JOIN Vcourse ON Vcourse.courseID = Vclass.courseID
+	JOIN Vtime ON Vclass.timeID = Vtime.timeID 
+	WHERE Vclass.classID = @classID
+)
+
+exec getTimeList 3
