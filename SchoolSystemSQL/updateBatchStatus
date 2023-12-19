@@ -1,0 +1,10 @@
+--update batch status to change the status of a student 
+CREATE PROC updateBatchStatus (@studentID int, @batch varchar(15))
+AS 
+	UPDATE studentDynamic
+	SET batchStatus = @batch 
+	WHERE studentDynamic.studentID = @studentID
+
+
+SELECT * FROM studentDynamic
+exec updateBatchStatus 1, 'Freshman'
