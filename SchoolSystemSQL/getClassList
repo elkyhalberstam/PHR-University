@@ -1,0 +1,22 @@
+--getClassList- for the class passed into the parameter, get students and teachers
+
+ALTER PROC getClassList(@classID int)
+AS
+(
+	SELECT Vclass.classID, 
+		   (SELECT  Vperson.firstname +  ' ' + Vperson.lastname
+		    FROM Vteacher 
+			JOIN Vperson ON Vteacher.personID = Vperson.personID
+			JOIN Vclass ON Vteacher.teacherID = Vclass.teacherID
+			WHERE Vclass.classID = @classID
+			) AS [teacherName], 
+		   Vstudent.studentID, 
+		   Vperson.firstname +  ' ' + Vperson.lastname AS [name]
+	FROM Vclass 
+	JOIN VstudentClassList ON Vclass.classID = VstudentClassList.classID
+	JOIN Vstudent ON VstudentClassList.studentID = Vstudent.studentID
+	JOIN Vperson ON Vstudent.personID = Vperson.personID 
+	WHERE Vclass.classID = @classID 
+)
+
+exec getClassList 3
