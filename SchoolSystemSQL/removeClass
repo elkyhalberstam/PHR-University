@@ -1,0 +1,15 @@
+--removeClass- removes a class from the available classes
+CREATE PROCEDURE removeClass (@classID int) 
+AS 
+	UPDATE class 
+	SET archived = GETDATE()
+	WHERE class.classID = @classID
+
+	--there might be bug where the class will exist elsewhere 
+	--so in studentClassList will also have to remove the class 
+
+exec removeClass 2
+
+SELECT * FROM class
+SELECT * FROM Vclass
+--archived correctly set to the date
