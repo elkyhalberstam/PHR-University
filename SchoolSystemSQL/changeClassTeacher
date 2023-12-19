@@ -1,0 +1,11 @@
+--changeClassTeacher - changes the teacherID for a class to point to a different teacher 
+CREATE PROC changeClassTeacher (@classID int, @teacherID int)
+AS 
+
+	UPDATE class 
+	SET teacherID = @teacherID
+	WHERE class.classID = @classID
+
+exec changeClassTeacher 3, 3
+
+SELECT * FROM class
