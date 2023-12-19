@@ -1,0 +1,15 @@
+--display all classroom information for a specific class 
+CREATE PROC showClassroom (@classID int)
+AS
+(
+	SELECT Vclass.classID,
+	Vroom.roomID, 
+		   Vroom.roomNum,
+		   Vroom.location,
+		   Vroom.roomType
+	FROM Vroom
+	JOIN Vclass ON Vroom.roomID = Vclass.roomID
+	WHERE  Vclass.classID = @classID
+)
+
+exec showClassroom 4
