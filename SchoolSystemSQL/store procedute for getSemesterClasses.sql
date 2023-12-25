@@ -10,7 +10,8 @@ Select Vcourse.[name],
 		tempTeacher.advisor,
 		[time] = Convert(varchar,Vtime.startTime) +' ' +Vtime.[days],
 		Vroom.[location],
-		[room] = STR(floorNum) +' - ' +STR(roomNum)
+		[room] = STR(floorNum) +' - ' +STR(roomNum),
+		Vcourse.department
 from Vclass
 join tempClassList on tempClassList.classID = Vclass.classID
 join (Select Vteacher.teacherID, Vteacher.personID, Vperson.firstName, Vperson.lastName, Vperson.title, Vteacher.advisor
