@@ -1,0 +1,21 @@
+--getCreditsApplied - shows how many credits the student has to their degree
+ALTER PROC getCreditsApplied(@studentID int)
+AS 
+(	
+	SELECT Vstudent.studentID, 
+		[Name] = Vperson.firstName + ' ' + Vperson.lastName,
+		[Required Credits] = 
+		(SELECT Vmajor.requiredCred  + ISNULL(Vminor.requiredCred, '') 
+		 FROM Vstudent 
+		 lEFT JOIN Vminor ON Vstudent.minorID = Vminor.minorID
+		 JOIN Vmajor ON Vstudent.majorID = Vmajor.majorID
+		 WHERE Vstudent.studentID = @studentID),
+		VstudentDynamic.creditsComp
+	FROM Vstudent
+	JOIN Vperson ON Vstudent.personID = Vperson.personID
+    JOIN VstudentDynamic ON VstudentDynamic.studentID = Vstudent.studentID
+	WHERE Vstudent.studentID = @studentID
+)
+
+exec getCreditsApplied 8
+SELECT * FROM student
