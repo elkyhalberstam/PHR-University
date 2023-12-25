@@ -1,0 +1,21 @@
+--inputGrades: the professor should input grades for the class
+--needs the classID, studentID, grade 
+
+--for security purposes, make sure it only works for the teacher of that class 
+
+CREATE PROC inputGrade( @studentID int, @classID int, @grade varchar (3))
+AS
+
+	UPDATE studentClassList 
+	SET studentClassList.grades = @grade
+	WHERE studentClassList.studentID = @studentID AND studentClassList.classID = @classID 
+
+SELECT * from studentClassList
+
+exec inputGrade 14, 14, 'A'
+exec inputGrade 15, 15, 'B'
+exec inputGrade 2, 16, 'C'
+exec inputGrade 7, 17, 'A'
+exec inputGrade 3, 18, 'A'
+exec inputGrade 4, 19, 'A'
+exec inputGrade 2, 20, 'A'
