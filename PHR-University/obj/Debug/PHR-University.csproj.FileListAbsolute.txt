@@ -11,3 +11,4 @@ C:\Users\Elky\source\repos\PHR-University\PHR-University\bin\Debug\PHR-Universit
 C:\Users\Elky\source\repos\PHR-University\PHR-University\bin\Debug\PHR-University.pdb
 C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR-University.exe
 C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR-University.pdb
+C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.courseSchedue.resources
