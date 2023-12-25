@@ -18,47 +18,19 @@ namespace PHR_University
             
         }
 
-        private void helloToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void scheduleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void StudentPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void academicToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void homeLabel_Click(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Panel home = HomePannel;
-            home.Show();
+            HomePannel.Show();
+            
+            HomePannel.Visible = true;
             regisratinPanel.Hide();
             academicPanel.Hide();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -72,6 +44,7 @@ namespace PHR_University
             regisratinPanel.Show();
             HomePannel.Hide();
             academicPanel.Hide();
+            
         }
 
         private void menueAcademics_Click(object sender, EventArgs e)
@@ -79,7 +52,10 @@ namespace PHR_University
             academicPanel.Show();
             regisratinPanel.Hide();
             HomePannel.Hide();
-            
+
+
+
+
         }
 
         private void courseButton_Click(object sender, EventArgs e)
@@ -121,6 +97,34 @@ namespace PHR_University
             //add/drop button
             Form addDrop = new addDropForm();
             addDrop.Show();
+        }
+
+        private void StudentPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form courseSchedule = new courseSchedue();
+            courseSchedule.Show();
+        }
+
+        private void HomeMenu_Click(object sender, EventArgs e)
+        {
+            academicPanel.Hide();
+            regisratinPanel.Hide();
+            HomePannel.Show();
+        }
+
+        private void HomePannel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
