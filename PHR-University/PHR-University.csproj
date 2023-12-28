@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,6 +52,30 @@
     </Compile>
     <Compile Include="AdminPage.Designer.cs">
       <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="courseSchedue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="courseSchedue.Designer.cs">
+      <DependentUpon>courseSchedue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addDropForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addDropForm.Designer.cs">
+      <DependentUpon>addDropForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lookUpclasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lookUpclasses.Designer.cs">
+      <DependentUpon>lookUpclasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intital.Designer.cs">
+      <DependentUpon>Intital.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -72,8 +97,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="courseSchedue.resx">
+      <DependentUpon>courseSchedue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addDropForm.resx">
+      <DependentUpon>addDropForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lookUpclasses.resx">
+      <DependentUpon>lookUpclasses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfessorPage.resx">
       <DependentUpon>ProfessorPage.cs</DependentUpon>
