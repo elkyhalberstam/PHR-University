@@ -31,21 +31,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.menueAcademics = new System.Windows.Forms.Button();
             this.menuRegistratiom = new System.Windows.Forms.Button();
+            this.HomeMenu = new System.Windows.Forms.Button();
             this.regisratinPanel = new System.Windows.Forms.Panel();
             this.registrationLabel = new System.Windows.Forms.Label();
+            this.addDropButton = new System.Windows.Forms.Button();
+            this.lookUPclasses = new System.Windows.Forms.Button();
             this.academicPanel = new System.Windows.Forms.Panel();
             this.transcriptButton = new System.Windows.Forms.Button();
             this.academicsLabel = new System.Windows.Forms.Label();
             this.gradStatusButton = new System.Windows.Forms.Button();
             this.currentGradesButton = new System.Windows.Forms.Button();
-            this.addDropButton = new System.Windows.Forms.Button();
-            this.lookUPclasses = new System.Windows.Forms.Button();
             this.HomePannel = new System.Windows.Forms.Panel();
+            this.homeLabel = new System.Windows.Forms.Label();
             this.asButton = new System.Windows.Forms.Button();
             this.courseButton = new System.Windows.Forms.Button();
             this.emailButton = new System.Windows.Forms.Button();
-            this.HomeMenu = new System.Windows.Forms.Button();
-            this.homeLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.regisratinPanel.SuspendLayout();
             this.academicPanel.SuspendLayout();
@@ -57,16 +57,18 @@
             this.panel1.Controls.Add(this.menueAcademics);
             this.panel1.Controls.Add(this.menuRegistratiom);
             this.panel1.Controls.Add(this.HomeMenu);
-            this.panel1.Location = new System.Drawing.Point(0, 12);
+            this.panel1.Location = new System.Drawing.Point(0, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 45);
+            this.panel1.Size = new System.Drawing.Size(1067, 36);
             this.panel1.TabIndex = 2;
             // 
             // menueAcademics
             // 
-            this.menueAcademics.Location = new System.Drawing.Point(988, 3);
+            this.menueAcademics.Location = new System.Drawing.Point(878, 2);
+            this.menueAcademics.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.menueAcademics.Name = "menueAcademics";
-            this.menueAcademics.Size = new System.Drawing.Size(173, 39);
+            this.menueAcademics.Size = new System.Drawing.Size(154, 31);
             this.menueAcademics.TabIndex = 6;
             this.menueAcademics.Text = "Academics";
             this.menueAcademics.UseVisualStyleBackColor = true;
@@ -74,13 +76,25 @@
             // 
             // menuRegistratiom
             // 
-            this.menuRegistratiom.Location = new System.Drawing.Point(514, 3);
+            this.menuRegistratiom.Location = new System.Drawing.Point(457, 2);
+            this.menuRegistratiom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.menuRegistratiom.Name = "menuRegistratiom";
-            this.menuRegistratiom.Size = new System.Drawing.Size(173, 39);
+            this.menuRegistratiom.Size = new System.Drawing.Size(154, 31);
             this.menuRegistratiom.TabIndex = 5;
             this.menuRegistratiom.Text = "Registration";
             this.menuRegistratiom.UseVisualStyleBackColor = true;
             this.menuRegistratiom.Click += new System.EventHandler(this.menuRegistratiom_Click);
+            // 
+            // HomeMenu
+            // 
+            this.HomeMenu.Location = new System.Drawing.Point(105, 3);
+            this.HomeMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HomeMenu.Name = "HomeMenu";
+            this.HomeMenu.Size = new System.Drawing.Size(154, 31);
+            this.HomeMenu.TabIndex = 7;
+            this.HomeMenu.Text = "Home";
+            this.HomeMenu.UseVisualStyleBackColor = true;
+            this.HomeMenu.Click += new System.EventHandler(this.HomeMenu_Click);
             // 
             // regisratinPanel
             // 
@@ -88,21 +102,44 @@
             this.regisratinPanel.Controls.Add(this.registrationLabel);
             this.regisratinPanel.Controls.Add(this.addDropButton);
             this.regisratinPanel.Controls.Add(this.lookUPclasses);
-            this.regisratinPanel.Location = new System.Drawing.Point(3, 134);
+            this.regisratinPanel.Location = new System.Drawing.Point(3, 107);
+            this.regisratinPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.regisratinPanel.Name = "regisratinPanel";
-            this.regisratinPanel.Size = new System.Drawing.Size(1200, 424);
+            this.regisratinPanel.Size = new System.Drawing.Size(1067, 339);
             this.regisratinPanel.TabIndex = 4;
             // 
-            // label1
+            // registrationLabel
             // 
             this.registrationLabel.AutoSize = true;
             this.registrationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrationLabel.Location = new System.Drawing.Point(433, 129);
-            this.registrationLabel.Name = "label1";
-            this.registrationLabel.Size = new System.Drawing.Size(337, 69);
+            this.registrationLabel.Location = new System.Drawing.Point(385, 103);
+            this.registrationLabel.Name = "registrationLabel";
+            this.registrationLabel.Size = new System.Drawing.Size(280, 58);
             this.registrationLabel.TabIndex = 3;
             this.registrationLabel.Text = "REGISTER";
             this.registrationLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // addDropButton
+            // 
+            this.addDropButton.Location = new System.Drawing.Point(650, 192);
+            this.addDropButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addDropButton.Name = "addDropButton";
+            this.addDropButton.Size = new System.Drawing.Size(154, 68);
+            this.addDropButton.TabIndex = 2;
+            this.addDropButton.Text = "Add / Drop Classes";
+            this.addDropButton.UseVisualStyleBackColor = true;
+            this.addDropButton.Click += new System.EventHandler(this.addDropButton_Click);
+            // 
+            // lookUPclasses
+            // 
+            this.lookUPclasses.Location = new System.Drawing.Point(265, 192);
+            this.lookUPclasses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lookUPclasses.Name = "lookUPclasses";
+            this.lookUPclasses.Size = new System.Drawing.Size(154, 68);
+            this.lookUPclasses.TabIndex = 1;
+            this.lookUPclasses.Text = "Look up Classes";
+            this.lookUPclasses.UseVisualStyleBackColor = true;
+            this.lookUPclasses.Click += new System.EventHandler(this.lookUPclasses_Click);
             // 
             // academicPanel
             // 
@@ -111,70 +148,54 @@
             this.academicPanel.Controls.Add(this.academicsLabel);
             this.academicPanel.Controls.Add(this.gradStatusButton);
             this.academicPanel.Controls.Add(this.currentGradesButton);
-            this.academicPanel.Location = new System.Drawing.Point(3, 133);
+            this.academicPanel.Location = new System.Drawing.Point(3, 106);
+            this.academicPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.academicPanel.Name = "academicPanel";
-            this.academicPanel.Size = new System.Drawing.Size(1200, 424);
+            this.academicPanel.Size = new System.Drawing.Size(1067, 339);
             this.academicPanel.TabIndex = 5;
             // 
-            // button3
+            // transcriptButton
             // 
-            this.transcriptButton.Location = new System.Drawing.Point(514, 240);
-            this.transcriptButton.Name = "button3";
-            this.transcriptButton.Size = new System.Drawing.Size(173, 85);
+            this.transcriptButton.Location = new System.Drawing.Point(457, 192);
+            this.transcriptButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.transcriptButton.Name = "transcriptButton";
+            this.transcriptButton.Size = new System.Drawing.Size(154, 68);
             this.transcriptButton.TabIndex = 4;
             this.transcriptButton.Text = " Transcript";
             this.transcriptButton.UseVisualStyleBackColor = true;
             this.transcriptButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label2
+            // academicsLabel
             // 
             this.academicsLabel.AutoSize = true;
             this.academicsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.academicsLabel.Location = new System.Drawing.Point(433, 129);
-            this.academicsLabel.Name = "label2";
-            this.academicsLabel.Size = new System.Drawing.Size(386, 69);
+            this.academicsLabel.Location = new System.Drawing.Point(385, 103);
+            this.academicsLabel.Name = "academicsLabel";
+            this.academicsLabel.Size = new System.Drawing.Size(321, 58);
             this.academicsLabel.TabIndex = 3;
             this.academicsLabel.Text = "ACADEMICS";
             // 
-            // button1
+            // gradStatusButton
             // 
-            this.gradStatusButton.Location = new System.Drawing.Point(865, 240);
-            this.gradStatusButton.Name = "button1";
-            this.gradStatusButton.Size = new System.Drawing.Size(173, 85);
+            this.gradStatusButton.Location = new System.Drawing.Point(769, 192);
+            this.gradStatusButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gradStatusButton.Name = "gradStatusButton";
+            this.gradStatusButton.Size = new System.Drawing.Size(154, 68);
             this.gradStatusButton.TabIndex = 2;
             this.gradStatusButton.Text = "Graduation Status";
             this.gradStatusButton.UseVisualStyleBackColor = true;
             this.gradStatusButton.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // button2
+            // currentGradesButton
             // 
-            this.currentGradesButton.Location = new System.Drawing.Point(171, 240);
-            this.currentGradesButton.Name = "button2";
-            this.currentGradesButton.Size = new System.Drawing.Size(173, 85);
+            this.currentGradesButton.Location = new System.Drawing.Point(152, 192);
+            this.currentGradesButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.currentGradesButton.Name = "currentGradesButton";
+            this.currentGradesButton.Size = new System.Drawing.Size(154, 68);
             this.currentGradesButton.TabIndex = 1;
             this.currentGradesButton.Text = "Current Grades";
             this.currentGradesButton.UseVisualStyleBackColor = true;
             this.currentGradesButton.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // addDropButton
-            // 
-            this.addDropButton.Location = new System.Drawing.Point(731, 240);
-            this.addDropButton.Name = "addDropButton";
-            this.addDropButton.Size = new System.Drawing.Size(173, 85);
-            this.addDropButton.TabIndex = 2;
-            this.addDropButton.Text = "Add / Drop Classes";
-            this.addDropButton.UseVisualStyleBackColor = true;
-            this.addDropButton.Click += new System.EventHandler(this.addDropButton_Click);
-            // 
-            // lookUPclasses
-            // 
-            this.lookUPclasses.Location = new System.Drawing.Point(298, 240);
-            this.lookUPclasses.Name = "lookUPclasses";
-            this.lookUPclasses.Size = new System.Drawing.Size(173, 85);
-            this.lookUPclasses.TabIndex = 1;
-            this.lookUPclasses.Text = "Look up Classes";
-            this.lookUPclasses.UseVisualStyleBackColor = true;
-            this.lookUPclasses.Click += new System.EventHandler(this.lookUPclasses_Click);
             // 
             // HomePannel
             // 
@@ -183,26 +204,39 @@
             this.HomePannel.Controls.Add(this.asButton);
             this.HomePannel.Controls.Add(this.courseButton);
             this.HomePannel.Controls.Add(this.emailButton);
-            this.HomePannel.Location = new System.Drawing.Point(3, 135);
+            this.HomePannel.Location = new System.Drawing.Point(3, 107);
+            this.HomePannel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HomePannel.Name = "HomePannel";
-            this.HomePannel.Size = new System.Drawing.Size(1200, 424);
+            this.HomePannel.Size = new System.Drawing.Size(1067, 339);
             this.HomePannel.TabIndex = 5;
             this.HomePannel.Paint += new System.Windows.Forms.PaintEventHandler(this.HomePannel_Paint);
             // 
+            // homeLabel
+            // 
+            this.homeLabel.AutoSize = true;
+            this.homeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeLabel.Location = new System.Drawing.Point(347, 106);
+            this.homeLabel.Name = "homeLabel";
+            this.homeLabel.Size = new System.Drawing.Size(424, 58);
+            this.homeLabel.TabIndex = 3;
+            this.homeLabel.Text = "STUDENT HOME";
+            // 
             // asButton
             // 
-            this.asButton.Location = new System.Drawing.Point(853, 243);
+            this.asButton.Location = new System.Drawing.Point(758, 194);
+            this.asButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.asButton.Name = "asButton";
-            this.asButton.Size = new System.Drawing.Size(173, 85);
+            this.asButton.Size = new System.Drawing.Size(154, 68);
             this.asButton.TabIndex = 2;
             this.asButton.Text = "Academic Schedule";
             this.asButton.UseVisualStyleBackColor = true;
             // 
             // courseButton
             // 
-            this.courseButton.Location = new System.Drawing.Point(499, 243);
+            this.courseButton.Location = new System.Drawing.Point(444, 194);
+            this.courseButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.courseButton.Name = "courseButton";
-            this.courseButton.Size = new System.Drawing.Size(173, 85);
+            this.courseButton.Size = new System.Drawing.Size(154, 68);
             this.courseButton.TabIndex = 1;
             this.courseButton.Text = "Course Schedule";
             this.courseButton.UseVisualStyleBackColor = true;
@@ -210,44 +244,25 @@
             // 
             // emailButton
             // 
-            this.emailButton.Location = new System.Drawing.Point(171, 243);
+            this.emailButton.Location = new System.Drawing.Point(152, 194);
+            this.emailButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailButton.Name = "emailButton";
-            this.emailButton.Size = new System.Drawing.Size(173, 85);
+            this.emailButton.Size = new System.Drawing.Size(154, 68);
             this.emailButton.TabIndex = 0;
             this.emailButton.Text = "Email";
             this.emailButton.UseVisualStyleBackColor = true;
             // 
-            // HomeMenu
-            // 
-            this.HomeMenu.Location = new System.Drawing.Point(118, 4);
-            this.HomeMenu.Name = "HomeMenu";
-            this.HomeMenu.Size = new System.Drawing.Size(173, 39);
-            this.HomeMenu.TabIndex = 7;
-            this.HomeMenu.Text = "Home";
-            this.HomeMenu.UseVisualStyleBackColor = true;
-            this.HomeMenu.Click += new System.EventHandler(this.HomeMenu_Click);
-            // 
-            // homeLabel
-            // 
-            this.homeLabel.AutoSize = true;
-            this.homeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeLabel.Location = new System.Drawing.Point(487, 132);
-            this.homeLabel.Name = "homeLabel";
-            this.homeLabel.Size = new System.Drawing.Size(210, 69);
-            this.homeLabel.TabIndex = 3;
-            this.homeLabel.Text = "HOME";
-            // 
             // StudentPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.HomePannel);
             this.Controls.Add(this.academicPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.regisratinPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StudentPage";
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentPage_FormClosing);

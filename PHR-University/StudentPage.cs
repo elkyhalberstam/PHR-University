@@ -53,9 +53,6 @@ namespace PHR_University
             regisratinPanel.Hide();
             HomePannel.Hide();
 
-
-
-
         }
 
         private void courseButton_Click(object sender, EventArgs e)

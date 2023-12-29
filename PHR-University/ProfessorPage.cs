@@ -19,21 +19,6 @@ namespace PHR_University
 
         private void ProfessorPage_Load(object sender, EventArgs e) { }
 
-        private void MenuHomeButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MenuRegistrationButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MenuAcademicsButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void HomeTextLabel_Click(object sender, EventArgs e)
         {
 
@@ -44,14 +29,55 @@ namespace PHR_University
 
         }
 
-        private void CourseButton_Click(object sender, EventArgs e)
+        private void CurrentSchedButton_Click(object sender, EventArgs e)
         {
-
+            //current classes professor is supposed to teach 
         }
 
         private void AcademicSchedButton_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void MenuHomeButton_Click(object sender, EventArgs e)
+        {
+            HomePanel.Show();
+            HomePanel.Visible = true;
+            ProfessorGradesPanel.Hide();
+            ProfessorRosterPanel.Hide();
+            ProfessorAssignmentsPanel.Hide();
+           
+        }
+
+        private void MenuGradesButton_Click(object sender, EventArgs e)
+        {
+            HomePanel.Hide();
+            ProfessorAssignmentsPanel.Hide();
+            ProfessorRosterPanel.Hide();
+            ProfessorGradesPanel.Show();
+
+        }
+
+        private void MenuRosterButton_Click(object sender, EventArgs e)
+        {
+            HomePanel.Hide();
+            ProfessorGradesPanel.Hide();
+            ProfessorAssignmentsPanel.Hide();
+            ProfessorRosterPanel.Show();
+
+        }
+
+        private void MenuAssignmentsButton_Click(object sender, EventArgs e)
+        {
+            ProfessorRosterPanel.Hide();
+            HomePanel.Hide();
+            ProfessorGradesPanel.Hide();
+            ProfessorAssignmentsPanel.Show();
+        }
+        private void ViewGradesButton_Click(object sender, EventArgs e)
+        {
+
+        }
+       
     }
 }
