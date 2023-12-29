@@ -34,7 +34,7 @@ namespace PHR_University
                 //  typical connection string:
                 //   sqlCon = new SqlConnection("Server=DESKTOP-17VOE83;Database=Finance;Trusted_Connection=True;");
                 //string strConnect = $"Server={strServer};Database={strDatabase};Trusted_Connection=True;";
-                string strConnect = "Server=DESKTOP-2NS3C4L\\SQLEXPRESS;Database=SchoolSystem;Trusted_Connection=True;";
+                string strConnect = "Server=DESKTOP-ID4TL0U\\SQLExpress;Database=SchoolSystem;Trusted_Connection=True;";
 
                 sqlCon = new SqlConnection(strConnect);
                 sqlCon.Open();

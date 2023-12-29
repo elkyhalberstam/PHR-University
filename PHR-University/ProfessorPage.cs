@@ -16,5 +16,42 @@ namespace PHR_University
         {
             InitializeComponent();
         }
+
+        private void ProfessorPage_Load(object sender, EventArgs e) { }
+
+        private void MenuHomeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuRegistrationButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuAcademicsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HomeTextLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmailButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CourseButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AcademicSchedButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

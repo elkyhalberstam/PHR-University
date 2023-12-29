@@ -32,12 +32,12 @@
             this.menueAcademics = new System.Windows.Forms.Button();
             this.menuRegistratiom = new System.Windows.Forms.Button();
             this.regisratinPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.registrationLabel = new System.Windows.Forms.Label();
             this.academicPanel = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.transcriptButton = new System.Windows.Forms.Button();
+            this.academicsLabel = new System.Windows.Forms.Label();
+            this.gradStatusButton = new System.Windows.Forms.Button();
+            this.currentGradesButton = new System.Windows.Forms.Button();
             this.addDropButton = new System.Windows.Forms.Button();
             this.lookUPclasses = new System.Windows.Forms.Button();
             this.HomePannel = new System.Windows.Forms.Panel();
@@ -85,7 +85,7 @@
             // regisratinPanel
             // 
             this.regisratinPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.regisratinPanel.Controls.Add(this.label1);
+            this.regisratinPanel.Controls.Add(this.registrationLabel);
             this.regisratinPanel.Controls.Add(this.addDropButton);
             this.regisratinPanel.Controls.Add(this.lookUPclasses);
             this.regisratinPanel.Location = new System.Drawing.Point(3, 134);
@@ -95,22 +95,22 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(433, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 69);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "REGISTER";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.registrationLabel.AutoSize = true;
+            this.registrationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registrationLabel.Location = new System.Drawing.Point(433, 129);
+            this.registrationLabel.Name = "label1";
+            this.registrationLabel.Size = new System.Drawing.Size(337, 69);
+            this.registrationLabel.TabIndex = 3;
+            this.registrationLabel.Text = "REGISTER";
+            this.registrationLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // academicPanel
             // 
             this.academicPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.academicPanel.Controls.Add(this.button3);
-            this.academicPanel.Controls.Add(this.label2);
-            this.academicPanel.Controls.Add(this.button1);
-            this.academicPanel.Controls.Add(this.button2);
+            this.academicPanel.Controls.Add(this.transcriptButton);
+            this.academicPanel.Controls.Add(this.academicsLabel);
+            this.academicPanel.Controls.Add(this.gradStatusButton);
+            this.academicPanel.Controls.Add(this.currentGradesButton);
             this.academicPanel.Location = new System.Drawing.Point(3, 133);
             this.academicPanel.Name = "academicPanel";
             this.academicPanel.Size = new System.Drawing.Size(1200, 424);
@@ -118,43 +118,43 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(514, 240);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 85);
-            this.button3.TabIndex = 4;
-            this.button3.Text = " Transcript";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.transcriptButton.Location = new System.Drawing.Point(514, 240);
+            this.transcriptButton.Name = "button3";
+            this.transcriptButton.Size = new System.Drawing.Size(173, 85);
+            this.transcriptButton.TabIndex = 4;
+            this.transcriptButton.Text = " Transcript";
+            this.transcriptButton.UseVisualStyleBackColor = true;
+            this.transcriptButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(433, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(386, 69);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "ACADEMICS";
+            this.academicsLabel.AutoSize = true;
+            this.academicsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.academicsLabel.Location = new System.Drawing.Point(433, 129);
+            this.academicsLabel.Name = "label2";
+            this.academicsLabel.Size = new System.Drawing.Size(386, 69);
+            this.academicsLabel.TabIndex = 3;
+            this.academicsLabel.Text = "ACADEMICS";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(865, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 85);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Graduation Status";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.gradStatusButton.Location = new System.Drawing.Point(865, 240);
+            this.gradStatusButton.Name = "button1";
+            this.gradStatusButton.Size = new System.Drawing.Size(173, 85);
+            this.gradStatusButton.TabIndex = 2;
+            this.gradStatusButton.Text = "Graduation Status";
+            this.gradStatusButton.UseVisualStyleBackColor = true;
+            this.gradStatusButton.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(171, 240);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 85);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Current Grades";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.currentGradesButton.Location = new System.Drawing.Point(171, 240);
+            this.currentGradesButton.Name = "button2";
+            this.currentGradesButton.Size = new System.Drawing.Size(173, 85);
+            this.currentGradesButton.TabIndex = 1;
+            this.currentGradesButton.Text = "Current Grades";
+            this.currentGradesButton.UseVisualStyleBackColor = true;
+            this.currentGradesButton.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // addDropButton
             // 
@@ -268,14 +268,14 @@
         private System.Windows.Forms.Button menueAcademics;
         private System.Windows.Forms.Button menuRegistratiom;
         private System.Windows.Forms.Panel regisratinPanel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label registrationLabel;
         private System.Windows.Forms.Button addDropButton;
         private System.Windows.Forms.Button lookUPclasses;
         private System.Windows.Forms.Panel academicPanel;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button transcriptButton;
+        private System.Windows.Forms.Label academicsLabel;
+        private System.Windows.Forms.Button gradStatusButton;
+        private System.Windows.Forms.Button currentGradesButton;
         private System.Windows.Forms.Panel HomePannel;
         private System.Windows.Forms.Button asButton;
         private System.Windows.Forms.Button courseButton;
