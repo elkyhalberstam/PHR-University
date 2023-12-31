@@ -1,0 +1,29 @@
+Alter procedure checkPersonStudent(@email varchar(255)) as
+with tempPerson as(
+	Select personID
+	from Vperson
+	where email = @email
+)
+select studentID
+from Vstudent
+join tempPerson on tempPerson.personID = Vstudent.personID
+
+Alter procedure checkPersonAdmin(@email varchar(255)) as
+with tempPerson as(
+	Select personID
+	from Vperson
+	where email = @email
+)
+select adminID
+from Vadmin
+join tempPerson on tempPerson.personID = Vadmin.personID
+
+Alter procedure checkPersonTeacher(@email varchar(255)) as
+with tempPerson as(
+	Select personID
+	from Vperson
+	where email = @email
+)
+select teacherID
+from Vteacher
+join tempPerson on tempPerson.personID = Vteacher.personID
