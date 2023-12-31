@@ -1,5 +1,6 @@
 -- all classes of current semseter with room time and teacher
 Alter procedure getSemesterClasses(@semester varchar(30)) as
+Begin
 with tempClassList as(
 	Select ClassID, semester, timeID, roomID, teacherID
 	from Vclass
@@ -20,5 +21,5 @@ join (Select Vteacher.teacherID, Vteacher.personID, Vperson.firstName, Vperson.l
 join Vtime on Vtime.timeID = Vclass.timeID
 join Vroom on Vroom.roomID = Vclass.roomID
 join Vcourse on Vcourse.courseID = Vclass.courseID
-
-exec getSemesterClasses 'Fall 2003'
+end 
+go  
