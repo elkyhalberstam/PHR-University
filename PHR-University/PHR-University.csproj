@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PAcademicSchedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAcademicSchedForm.Designer.cs">
+      <DependentUpon>PAcademicSchedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,11 +96,41 @@
     <Compile Include="PCurrScheduleForm.Designer.cs">
       <DependentUpon>PCurrScheduleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PEmailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PEmailForm.Designer.cs">
+      <DependentUpon>PEmailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEnterGradesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PEnterGradesForm.Designer.cs">
+      <DependentUpon>PEnterGradesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProfessorPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProfessorPage.Designer.cs">
       <DependentUpon>ProfessorPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PViewClassListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PViewClassListForm.Designer.cs">
+      <DependentUpon>PViewClassListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PViewGradesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PViewGradesForm.Designer.cs">
+      <DependentUpon>PViewGradesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PViewSubmissionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PViewSubmissionsForm.Designer.cs">
+      <DependentUpon>PViewSubmissionsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentPage.cs">
       <SubType>Form</SubType>
@@ -104,6 +140,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PAcademicSchedForm.resx">
+      <DependentUpon>PAcademicSchedForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +161,12 @@
     <EmbeddedResource Include="PCurrScheduleForm.resx">
       <DependentUpon>PCurrScheduleForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PEmailForm.resx">
+      <DependentUpon>PEmailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEnterGradesForm.resx">
+      <DependentUpon>PEnterGradesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProfessorPage.resx">
       <DependentUpon>ProfessorPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +179,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PViewClassListForm.resx">
+      <DependentUpon>PViewClassListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PViewGradesForm.resx">
+      <DependentUpon>PViewGradesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PViewSubmissionsForm.resx">
+      <DependentUpon>PViewSubmissionsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentPage.resx">
       <DependentUpon>StudentPage.cs</DependentUpon>
     </EmbeddedResource>

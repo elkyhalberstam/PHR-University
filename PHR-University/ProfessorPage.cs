@@ -27,7 +27,8 @@ namespace PHR_University
 
         private void EmailButton_Click(object sender, EventArgs e)
         {
-
+            Form showEmail = new PEmailForm();
+            showEmail.Show();
         }
 
         private void CurrentSchedButton_Click(object sender, EventArgs e)
@@ -38,7 +39,8 @@ namespace PHR_University
 
         private void AcademicSchedButton_Click(object sender, EventArgs e)
         {
-
+            Form showAcademicSchedule = new PAcademicSchedForm();
+            showAcademicSchedule.Show();
         }
 
         private void MenuHomeButton_Click(object sender, EventArgs e)
@@ -71,10 +73,10 @@ namespace PHR_University
             ProfessorGradesPanel.Hide();
             ProfessorAssignmentsPanel.Show();
         }
-        private void ViewGradesButton_Click(object sender, EventArgs e)
+       /* private void ViewGradesButton_Click(object sender, EventArgs e)
         {
 
-        }
+        }*/
         private void HomePanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -93,6 +95,34 @@ namespace PHR_University
         private void ProfessorPage_FormClosing(object sender, FormClosingEventArgs e)
         {
            Application.Exit();
+        }
+
+        private void EnterGradesButton_Click(object sender, EventArgs e)
+        {
+            //grades panel enter grades form 
+            Form enterGradesForm = new PEnterGradesForm();
+            enterGradesForm.Show(); 
+        }
+
+        private void ViewGradesButton_Click_1(object sender, EventArgs e)
+        {
+            //grades panel view grades
+            Form viewGradesForm = new PViewGradesForm();
+            viewGradesForm.Show();
+        }
+
+        private void ViewClassListButton_Click(object sender, EventArgs e)
+        {
+            //grades panel view class list form 
+            Form viewClassListForm = new PViewClassListForm();
+            viewClassListForm.Show();
+        }
+
+        private void ViewSubmissionsButton_Click(object sender, EventArgs e)
+        {
+            //assignments panel view submissions
+            Form viewSubmissionsForm = new PViewSubmissionsForm();
+            viewSubmissionsForm.Show();
         }
     }
 }

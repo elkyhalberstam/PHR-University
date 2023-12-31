@@ -41,10 +41,10 @@
             this.HomePanel = new System.Windows.Forms.Panel();
             this.ProfessorGradesPanel = new System.Windows.Forms.Panel();
             this.ProfessorGradesLabel = new System.Windows.Forms.Label();
+            this.ViewClassListButton = new System.Windows.Forms.Button();
             this.ProfessorAssignmentsPanel = new System.Windows.Forms.Panel();
             this.ProfessorAssignmentsLabel = new System.Windows.Forms.Label();
             this.ViewSubmissionsButton = new System.Windows.Forms.Button();
-            this.ViewClassListButton = new System.Windows.Forms.Button();
             this.MenuPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
             this.ProfessorGradesPanel.SuspendLayout();
@@ -102,6 +102,7 @@
             this.EnterGradesButton.Size = new System.Drawing.Size(180, 75);
             this.EnterGradesButton.TabIndex = 0;
             this.EnterGradesButton.Text = "Enter Grades";
+            this.EnterGradesButton.Click += new System.EventHandler(this.EnterGradesButton_Click);
             // 
             // ViewGradesButton
             // 
@@ -110,6 +111,7 @@
             this.ViewGradesButton.Size = new System.Drawing.Size(181, 78);
             this.ViewGradesButton.TabIndex = 0;
             this.ViewGradesButton.Text = "View Grades";
+            this.ViewGradesButton.Click += new System.EventHandler(this.ViewGradesButton_Click_1);
             // 
             // EmailButton
             // 
@@ -162,7 +164,7 @@
             this.HomePanel.Controls.Add(this.AcademicSchedButton);
             this.HomePanel.Controls.Add(this.CurrentSchedButton);
             this.HomePanel.Controls.Add(this.EmailButton);
-            this.HomePanel.Location = new System.Drawing.Point(-3, 113);
+            this.HomePanel.Location = new System.Drawing.Point(3, 132);
             this.HomePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HomePanel.Name = "HomePanel";
             this.HomePanel.Size = new System.Drawing.Size(1067, 339);
@@ -172,11 +174,11 @@
             // ProfessorGradesPanel
             // 
             this.ProfessorGradesPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.ProfessorGradesPanel.Controls.Add(this.ViewClassListButton);
             this.ProfessorGradesPanel.Controls.Add(this.ProfessorGradesLabel);
             this.ProfessorGradesPanel.Controls.Add(this.ViewGradesButton);
             this.ProfessorGradesPanel.Controls.Add(this.EnterGradesButton);
-            this.ProfessorGradesPanel.Location = new System.Drawing.Point(0, 114);
+            this.ProfessorGradesPanel.Controls.Add(this.ViewClassListButton);
+            this.ProfessorGradesPanel.Location = new System.Drawing.Point(-1, 124);
             this.ProfessorGradesPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProfessorGradesPanel.Name = "ProfessorGradesPanel";
             this.ProfessorGradesPanel.Size = new System.Drawing.Size(1067, 339);
@@ -195,12 +197,21 @@
             this.ProfessorGradesLabel.Text = "PROFESSOR GRADES/ ROSTER";
             this.ProfessorGradesLabel.Click += new System.EventHandler(this.ProfessorGradesLabel_Click);
             // 
+            // ViewClassListButton
+            // 
+            this.ViewClassListButton.Location = new System.Drawing.Point(728, 204);
+            this.ViewClassListButton.Name = "ViewClassListButton";
+            this.ViewClassListButton.Size = new System.Drawing.Size(181, 78);
+            this.ViewClassListButton.TabIndex = 4;
+            this.ViewClassListButton.Text = "View Class List";
+            this.ViewClassListButton.Click += new System.EventHandler(this.ViewClassListButton_Click);
+            // 
             // ProfessorAssignmentsPanel
             // 
             this.ProfessorAssignmentsPanel.BackColor = System.Drawing.SystemColors.Control;
             this.ProfessorAssignmentsPanel.Controls.Add(this.ProfessorAssignmentsLabel);
             this.ProfessorAssignmentsPanel.Controls.Add(this.ViewSubmissionsButton);
-            this.ProfessorAssignmentsPanel.Location = new System.Drawing.Point(0, 112);
+            this.ProfessorAssignmentsPanel.Location = new System.Drawing.Point(3, 132);
             this.ProfessorAssignmentsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProfessorAssignmentsPanel.Name = "ProfessorAssignmentsPanel";
             this.ProfessorAssignmentsPanel.Size = new System.Drawing.Size(1067, 339);
@@ -226,14 +237,7 @@
             this.ViewSubmissionsButton.TabIndex = 1;
             this.ViewSubmissionsButton.Text = "View Submissions";
             this.ViewSubmissionsButton.UseVisualStyleBackColor = true;
-            // 
-            // ViewClassListButton
-            // 
-            this.ViewClassListButton.Location = new System.Drawing.Point(728, 204);
-            this.ViewClassListButton.Name = "ViewClassListButton";
-            this.ViewClassListButton.Size = new System.Drawing.Size(181, 78);
-            this.ViewClassListButton.TabIndex = 4;
-            this.ViewClassListButton.Text = "View Class List";
+            this.ViewSubmissionsButton.Click += new System.EventHandler(this.ViewSubmissionsButton_Click);
             // 
             // ProfessorPage
             // 
@@ -241,8 +245,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.MenuPanel);
+            this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.ProfessorAssignmentsPanel);
             this.Controls.Add(this.ProfessorGradesPanel);
             this.Margin = new System.Windows.Forms.Padding(4);
