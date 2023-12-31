@@ -249,7 +249,6 @@
             this.Controls.Add(this.regisratinPanel);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "StudentPage";
-            this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentPage_FormClosing);
             this.Load += new System.EventHandler(this.StudentPage_Load);
             this.panel1.ResumeLayout(false);
