@@ -108,12 +108,12 @@ namespace PHR_University
 
                 if (admin!=null && admin >= 1)
                 {
-                    Form formAdmin = new AdminPage();
+                    Form formAdmin = new AdminPage(admin);
                     formAdmin.Show();
                 }
                 else if (teacher!=null && teacher >= 1)
                 {
-                    Form formTeacher = new ProfessorPage();
+                    Form formTeacher = new ProfessorPage(teacher);
                     formTeacher.Show();
                 }
                 else if (student >= 1)

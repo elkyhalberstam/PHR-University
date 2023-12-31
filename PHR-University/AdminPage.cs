@@ -15,11 +15,12 @@ namespace PHR_University
     public partial class AdminPage : Form
     {
         SqlConnection sqlCon = null;
-        public AdminPage()
+        int AdminId;
+        public AdminPage(int adminId)
         {
             InitializeComponent();
             createDataBaseConnection();
-        
+            AdminId = adminId;
         }
 
         private Boolean createDataBaseConnection()

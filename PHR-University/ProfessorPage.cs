@@ -12,9 +12,11 @@ namespace PHR_University
 {
     public partial class ProfessorPage : Form
     {
-        public ProfessorPage()
+        int TeacherID; 
+        public ProfessorPage(int teacherID)
         {
             InitializeComponent();
+            TeacherID = teacherID;
         }
 
         private void ProfessorPage_Load(object sender, EventArgs e) { }
