@@ -1,4 +1,4 @@
-Create procedure getCurrentSemester (@studentID int) as
+Create procedure getCurrentSemesterSTD (@studentID int) as
 with studentClasses as(
 	select classID
 	from VstudentClassList
