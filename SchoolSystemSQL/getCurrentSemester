@@ -1,0 +1,9 @@
+Create procedure getCurrentSemester (@studentID int) as
+with studentClasses as(
+	select classID
+	from VstudentClassList
+	where studentID = @studentID and isnull(grades,'') <> ''
+)
+Select semester
+from Vclass
+join studentClasses on studentClasses.classID = Vclass.classID

@@ -42,9 +42,7 @@ namespace PHR_University
         private void MenuHomeButton_Click(object sender, EventArgs e)
         {
             HomePanel.Show();
-           // HomePanel.Visible = true;
             ProfessorGradesPanel.Hide();
-           // ProfessorRosterPanel.Hide();
             ProfessorAssignmentsPanel.Hide();
            
         }
@@ -53,7 +51,6 @@ namespace PHR_University
         {
             HomePanel.Hide();
             ProfessorAssignmentsPanel.Hide();
-           // ProfessorRosterPanel.Hide();
             ProfessorGradesPanel.Show();
 
         }
@@ -63,13 +60,11 @@ namespace PHR_University
             HomePanel.Hide();
             ProfessorGradesPanel.Hide();
             ProfessorAssignmentsPanel.Hide();
-            //ProfessorRosterPanel.Show();
 
         }
 
         private void MenuAssignmentsButton_Click(object sender, EventArgs e)
         {
-            //ProfessorRosterPanel.Hide();
             HomePanel.Hide();
             ProfessorGradesPanel.Hide();
             ProfessorAssignmentsPanel.Show();
@@ -78,15 +73,6 @@ namespace PHR_University
         {
 
         }
-
-        //private void MenuRosterButtonNEW_Click(object sender, EventArgs e)
-        //{
-        //    ProfessorRosterPanel.Show();
-        //    HomePanel.Hide();
-        //    ProfessorGradesPanel.Hide();
-        //    ProfessorAssignmentsPanel.Hide();
-        //}
-
         private void HomePanel_Paint(object sender, PaintEventArgs e)
         {
 

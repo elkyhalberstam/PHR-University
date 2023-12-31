@@ -106,19 +106,19 @@ namespace PHR_University
 
                 student = (int)dataset.Tables["Student"].Rows[0].ItemArray[0];
 
-                if (admin == 1)
+                if (admin!=null && admin >= 1)
                 {
                     Form formAdmin = new AdminPage();
                     formAdmin.Show();
                 }
-                else if (teacher == 1)
+                else if (teacher!=null && teacher >= 1)
                 {
                     Form formTeacher = new ProfessorPage();
                     formTeacher.Show();
                 }
-                else if (student == 1)
+                else if (student >= 1)
                 {
-                    Form formStudent = new StudentPage();
+                    Form formStudent = new StudentPage(student);
                     formStudent.Show();
                 }
                 else { 

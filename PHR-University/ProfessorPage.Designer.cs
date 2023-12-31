@@ -266,7 +266,6 @@
         private System.Windows.Forms.Button MenuGradesButton;
         private System.Windows.Forms.Button MenuHomeButton;
         private System.Windows.Forms.Button EnterGradesButton;
-       // private System.Windows.Forms.Label GradesLabel;
         private System.Windows.Forms.Button ViewGradesButton;
         private System.Windows.Forms.Button EmailButton;
         private System.Windows.Forms.Button CurrentSchedButton;
@@ -275,9 +274,6 @@
         private System.Windows.Forms.Panel HomePanel;
         private System.Windows.Forms.Panel ProfessorGradesPanel;
         private System.Windows.Forms.Label ProfessorGradesLabel;
-       // private System.Windows.Forms.Button ViewGrades;
-       // private System.Windows.Forms.Button EnterGrades;
-       // private System.Windows.Forms.Panel GradesPanel;
         private System.Windows.Forms.Panel ProfessorAssignmentsPanel;
         private System.Windows.Forms.Label ProfessorAssignmentsLabel;
         private System.Windows.Forms.Button ViewSubmissionsButton;

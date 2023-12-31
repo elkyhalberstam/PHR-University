@@ -1,0 +1,11 @@
+Create procedure getSemesterList as
+Select distinct semester 
+from Vclass
+
+exec getSemesterList
+
+Create procedure getDepartmentList as
+Select distinct department 
+from Vcourse
+
+exec getDepartmentList
