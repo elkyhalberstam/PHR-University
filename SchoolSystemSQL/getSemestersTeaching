@@ -1,0 +1,5 @@
+create procedure getSemestersTeaching(@teacherID int) as 
+select semester 
+from Vclass 
+where teacherID = @teacherID
+exec getSemestersTeaching 2
