@@ -9,21 +9,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PHR_University
 {
-    public partial class lookUpclasses : Form
+    public partial class PCurrScheduleForm : Form
     {
         SqlConnection sqlCon = null;
-
-        public lookUpclasses()
+        int TeacherID;
+        public PCurrScheduleForm(int teacherID)
         {
+            TeacherID = teacherID;
             InitializeComponent();
-            createDataBaseConnection();
-            populateLists();
+            CreateDatabaseConnection();
+            PopulateSemesterComboBox();
+            PopulateTeacherID();
         }
-
-        private Boolean createDataBaseConnection()
+        private Boolean CreateDatabaseConnection()
         {
             try
             {
@@ -47,16 +49,11 @@ namespace PHR_University
             }
             return false;
         }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void PopulateSemesterComboBox()
         {
-
-        }
-
-        private void populateLists()
-        {
-            SqlCommand sqlCmd = new SqlCommand("getSemesterList", sqlCon);
+            SqlCommand sqlCmd = new SqlCommand("getSemestersTeaching", sqlCon);
             sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.Add("@teacherID", System.Data.SqlDbType.Int).Value = TeacherID;
             sqlCmd.ExecuteNonQuery();
             SqlDataAdapter da = new SqlDataAdapter(sqlCmd);
             DataSet dataset = new DataSet();
@@ -66,47 +63,36 @@ namespace PHR_University
 
             for (int i = 0; i < dataset.Tables[0].Rows.Count; i++)
             {
-                comboBox1.Items.Add(dataset.Tables[0].Rows[i].ItemArray[0]);
-            }
-
-
-            sqlCmd = new SqlCommand("getDepartmentList", sqlCon);
-            sqlCmd.CommandType = CommandType.StoredProcedure;
-            sqlCmd.ExecuteNonQuery();
-            da = new SqlDataAdapter(sqlCmd);
-            dataset = new DataSet();
-            da.Fill(dataset, "Department");
-            sqlCmd.ExecuteNonQuery();
-
-
-            for (int i = 0; i < dataset.Tables[0].Rows.Count; i++)
-            {
-                comboBox2.Items.Add(dataset.Tables[0].Rows[i].ItemArray[0]);
+                SemesterComboBox.Items.Add(dataset.Tables[0].Rows[i].ItemArray[0]);
             }
         }
+        private void PopulateTeacherID()
+        { 
+            IDTextLabel.Text = TeacherID.ToString();
+        }    
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void SemesterComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            if (comboBox1.SelectedItem.ToString() != null)
-            { 
-                String name = comboBox1.SelectedItem.ToString();
+            if (SemesterComboBox.SelectedItem.ToString() != null)
+            {
+                String name = SemesterComboBox.SelectedItem.ToString();
                 Console.WriteLine(name);
-                SqlCommand sqlCmd = new SqlCommand("getSemesterClasses", sqlCon);
+                SqlCommand sqlCmd = new SqlCommand("getTeacherSchedule", sqlCon);
                 sqlCmd.CommandType = CommandType.StoredProcedure;
                 sqlCmd.Parameters.Add("@semester", System.Data.SqlDbType.VarChar).Value = name;
+                sqlCmd.Parameters.Add("@teacherID", System.Data.SqlDbType.Int).Value = TeacherID;
                 sqlCmd.ExecuteNonQuery();
                 SqlDataAdapter da = new SqlDataAdapter(sqlCmd);
                 DataSet dataset = new DataSet();
                 da.Fill(dataset, "Classes");
-                dataGridView1.AutoGenerateColumns = true;
-                dataGridView1.DataSource = dataset.Tables["Classes"];
-                dataGridView1.ColumnHeadersVisible = true;
-                dataGridView1.RowHeadersVisible = false;
+                ScheduleGridView.AutoGenerateColumns = true;
+                ScheduleGridView.DataSource = dataset.Tables["Classes"];
+                ScheduleGridView.ColumnHeadersVisible = true;
+                ScheduleGridView.RowHeadersVisible = false;
 
-                foreach (DataGridViewColumn column in dataGridView1.Columns)
+                foreach (DataGridViewColumn column in ScheduleGridView.Columns)
                 {
-                    column.Width = (dataGridView1.Width / 7); // Set the desired width
+                    column.Width = (ScheduleGridView.Width / 4); // Set the desired width
                 }
             }
         }

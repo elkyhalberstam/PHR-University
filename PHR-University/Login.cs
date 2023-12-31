@@ -69,9 +69,9 @@ namespace PHR_University
 
             if ((int)(dataset.Tables["Login"].Rows[0].ItemArray[0]) == 1)
             {
-                int admin;
-                int teacher;
-                int student;
+                int admin = 0;
+                int teacher = 0;
+                int student = 0;
 
                 sqlCmd = new SqlCommand("checkPersonAdmin", sqlCon);
                 sqlCmd.CommandType = CommandType.StoredProcedure;
@@ -81,8 +81,9 @@ namespace PHR_University
                 da = new SqlDataAdapter(sqlCmd);
                 dataset = new DataSet();
                 da.Fill(dataset, "Admin");
-
-                admin = (int)dataset.Tables["Admin"].Rows[0].ItemArray[0];
+                if (dataset.Tables["Admin"].Rows.Count > 0) {
+                    admin = (int)dataset.Tables["Admin"].Rows[0].ItemArray[0];
+                }
 
                 sqlCmd = new SqlCommand("checkPersonTeacher", sqlCon);
                 sqlCmd.CommandType = CommandType.StoredProcedure;
@@ -92,9 +93,10 @@ namespace PHR_University
                 da = new SqlDataAdapter(sqlCmd);
                 dataset = new DataSet();
                 da.Fill(dataset, "Teacher");
-
-                teacher = (int)dataset.Tables["Teacher"].Rows[0].ItemArray[0];
-
+                if(dataset.Tables["Teacher"].Rows.Count > 0)
+                { 
+                    teacher = (int)dataset.Tables["Teacher"].Rows[0].ItemArray[0];
+                }
                 sqlCmd = new SqlCommand("checkPersonStudent", sqlCon);
                 sqlCmd.CommandType = CommandType.StoredProcedure;
                 sqlCmd.Parameters.Add("@email", System.Data.SqlDbType.VarChar).Value = user;
@@ -103,15 +105,16 @@ namespace PHR_University
                 da = new SqlDataAdapter(sqlCmd);
                 dataset = new DataSet();
                 da.Fill(dataset, "Student");
-
-                student = (int)dataset.Tables["Student"].Rows[0].ItemArray[0];
-
-                if (admin!=null && admin >= 1)
+                if (dataset.Tables["Student"].Rows.Count >  0) 
+                { 
+                    student = (int)dataset.Tables["Student"].Rows[0].ItemArray[0];
+                }
+                if (admin >= 1)
                 {
                     Form formAdmin = new AdminPage(admin);
                     formAdmin.Show();
                 }
-                else if (teacher!=null && teacher >= 1)
+                else if (teacher >= 1)
                 {
                     Form formTeacher = new ProfessorPage(teacher);
                     formTeacher.Show();

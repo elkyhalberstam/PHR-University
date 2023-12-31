@@ -32,3 +32,4 @@ C:\Users\cbcha\Source\Repos\PHR-University\PHR-University\obj\Debug\PHR-Universi
 C:\Users\cbcha\Source\Repos\PHR-University\PHR-University\obj\Debug\PHR-University.csproj.CoreCompileInputs.cache
 C:\Users\cbcha\Source\Repos\PHR-University\PHR-University\obj\Debug\PHR-University.exe
 C:\Users\cbcha\Source\Repos\PHR-University\PHR-University\obj\Debug\PHR-University.pdb
+C:\Users\cbcha\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.PCurrScheduleForm.resources

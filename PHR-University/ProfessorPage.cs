@@ -18,7 +18,6 @@ namespace PHR_University
             InitializeComponent();
             TeacherID = teacherID;
         }
-
         private void ProfessorPage_Load(object sender, EventArgs e) { }
 
         private void HomeTextLabel_Click(object sender, EventArgs e)
@@ -33,7 +32,8 @@ namespace PHR_University
 
         private void CurrentSchedButton_Click(object sender, EventArgs e)
         {
-            //current classes professor is supposed to teach 
+            Form showCurrSchedule = new PCurrScheduleForm(TeacherID);
+            showCurrSchedule.Show();
         }
 
         private void AcademicSchedButton_Click(object sender, EventArgs e)
