@@ -164,7 +164,7 @@
             this.HomePanel.Controls.Add(this.AcademicSchedButton);
             this.HomePanel.Controls.Add(this.CurrentSchedButton);
             this.HomePanel.Controls.Add(this.EmailButton);
-            this.HomePanel.Location = new System.Drawing.Point(3, 132);
+            this.HomePanel.Location = new System.Drawing.Point(-1, 126);
             this.HomePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HomePanel.Name = "HomePanel";
             this.HomePanel.Size = new System.Drawing.Size(1067, 339);

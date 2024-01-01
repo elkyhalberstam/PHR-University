@@ -39,3 +39,5 @@ C:\Users\cbcha\source\repos\PHR-University\PHR-University\obj\Debug\PHR_Universi
 C:\Users\cbcha\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.PViewClassListForm.resources
 C:\Users\cbcha\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.PViewGradesForm.resources
 C:\Users\cbcha\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.PViewSubmissionsForm.resources
+C:\Users\cbcha\source\repos\PHR-University\PHR-University\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\cbcha\source\repos\PHR-University\PHR-University\obj\Debug\PHR-University.csproj.CopyComplete

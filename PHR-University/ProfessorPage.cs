@@ -100,7 +100,7 @@ namespace PHR_University
         private void EnterGradesButton_Click(object sender, EventArgs e)
         {
             //grades panel enter grades form 
-            Form enterGradesForm = new PEnterGradesForm();
+            Form enterGradesForm = new PEnterGradesForm(TeacherID);
             enterGradesForm.Show(); 
         }
 
@@ -114,7 +114,7 @@ namespace PHR_University
         private void ViewClassListButton_Click(object sender, EventArgs e)
         {
             //grades panel view class list form 
-            Form viewClassListForm = new PViewClassListForm();
+            Form viewClassListForm = new PViewClassListForm(TeacherID);
             viewClassListForm.Show();
         }
 
