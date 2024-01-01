@@ -1,6 +1,6 @@
 ﻿namespace PHR_University
 {
-    partial class transcript
+    partial class stdTranscript
     {
         /// <summary>
         /// Required designer variable.

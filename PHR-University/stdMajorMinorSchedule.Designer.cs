@@ -1,6 +1,6 @@
 ﻿namespace PHR_University
 {
-    partial class majorMinorSchedule
+    partial class stdMajorMinorSchedule
     {
         /// <summary>
         /// Required designer variable.

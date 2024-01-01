@@ -6,14 +6,14 @@ using System.Windows.Forms;
 
 namespace PHR_University
 {
-    public partial class addDropForm : Form
+    public partial class stdAddDropForm : Form
     {
         SqlConnection sqlCon = null;
         int studentID;
         int[] classIdList;
         int addDrop;
         int classID;
-        public addDropForm(int studentID)
+        public stdAddDropForm(int studentID)
         {
             InitializeComponent();
             createDataBaseConnection();

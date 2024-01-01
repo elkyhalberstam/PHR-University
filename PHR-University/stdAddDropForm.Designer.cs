@@ -1,6 +1,6 @@
 ﻿namespace PHR_University
 {
-    partial class addDropForm
+    partial class stdAddDropForm
     {
         /// <summary>
         /// Required designer variable.

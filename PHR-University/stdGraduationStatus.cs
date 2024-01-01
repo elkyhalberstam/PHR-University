@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace PHR_University
 {
-    public partial class graduationStatus : Form
+    public partial class stdGraduationStatus : Form
     {
         SqlConnection sqlCon = null;
         int studentID;
-        public graduationStatus(int studentID)
+        public stdGraduationStatus(int studentID)
         {
             InitializeComponent();
             createDataBaseConnection();

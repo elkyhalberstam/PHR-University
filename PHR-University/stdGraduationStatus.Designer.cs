@@ -1,6 +1,6 @@
 ﻿namespace PHR_University
 {
-    partial class graduationStatus
+    partial class stdGraduationStatus
     {
         /// <summary>
         /// Required designer variable.

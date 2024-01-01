@@ -19,87 +19,62 @@ namespace PHR_University
             this.studentID = studentID;
         }
 
-        private void StudentPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
-            HomePannel.Show();
-            
-            HomePannel.Visible = true;
-            regisratinPanel.Hide();
-            academicPanel.Hide();
-           
+            studnetHomePannel.Show();
+            studentRegisratinPanel.Hide();
+            studentAcademicPanel.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuRegistratiom_Click(object sender, EventArgs e)
+        private void stdRegistrationMenue_click(object sender, EventArgs e)
         {
             
-            regisratinPanel.Show();
-            HomePannel.Hide();
-            academicPanel.Hide();
+            studentRegisratinPanel.Show();
+            studnetHomePannel.Hide();
+            studentAcademicPanel.Hide();
             
         }
 
-        private void menueAcademics_Click(object sender, EventArgs e)
+        private void stdAcademicsMenu_click(object sender, EventArgs e)
         {
-            academicPanel.Show();
-            regisratinPanel.Hide();
-            HomePannel.Hide();
-
-
-
-
+            studentAcademicPanel.Show();
+            studentRegisratinPanel.Hide();
+            studnetHomePannel.Hide();
         }
 
-        private void courseButton_Click(object sender, EventArgs e)
+        private void stdCourseSchedlue_click(object sender, EventArgs e)
         {
-            //Form courseSchedule = new courseSchedue();
-            //courseSchedule.Show();
-        }
-
-        private void courseButton_Click_1(object sender, EventArgs e)
-        {
-            Form courseSchedule = new courseSchedue(studentID);
+            Form courseSchedule = new stdCourseSchedue(studentID);
             courseSchedule.Show();
         }
 
-        private void minorMajor_click(object sender, EventArgs e)
+        private void stdMinorMajor_click(object sender, EventArgs e)
         {
-            Form majorMinorSchedule= new majorMinorSchedule(studentID);
+            Form majorMinorSchedule= new stdMajorMinorSchedule(studentID);
             majorMinorSchedule.Show();
         }
 
-        private void transcript_Click(object sender, EventArgs e)
+        private void stdTranscript_Click(object sender, EventArgs e)
         {
-            Form transcript = new transcript(studentID);
+            Form transcript = new stdTranscript(studentID);
             transcript.Show();
         }
 
-        private void graduationStatus_click(object sender, EventArgs e)
+        private void stdGraduationStatus_click(object sender, EventArgs e)
         {
-            Form graduationStat= new graduationStatus(studentID);
+            Form graduationStat= new stdGraduationStatus(studentID);
             graduationStat.Show();
         }
 
-        private void lookUPclasses_Click(object sender, EventArgs e)
+        private void stdLookUPclasses_Click(object sender, EventArgs e)
         {
-            //look up classes
-            Form lookUp = new lookUpclasses();
+            Form lookUp = new stdLookUpclasses();
             lookUp.Show();
         }
 
-        private void addDropButton_Click(object sender, EventArgs e)
+        private void stdAddDropButton_Click(object sender, EventArgs e)
         {
-            //add/drop button
-            Form addDrop = new addDropForm(studentID);
+            Form addDrop = new stdAddDropForm(studentID);
             addDrop.Show();
         }
 
@@ -108,27 +83,17 @@ namespace PHR_University
             Application.Exit();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
-            Form courseSchedule = new courseSchedue(studentID);
+            Form courseSchedule = new stdCourseSchedue(studentID);
             courseSchedule.Show();
         }
 
-        private void HomeMenu_Click(object sender, EventArgs e)
+        private void stdHomeMenu_Click(object sender, EventArgs e)
         {
-            academicPanel.Hide();
-            regisratinPanel.Hide();
-            HomePannel.Show();
-        }
-
-        private void HomePannel_Paint(object sender, PaintEventArgs e)
-        {
-
+            studentAcademicPanel.Hide();
+            studentRegisratinPanel.Hide();
+            studnetHomePannel.Show();
         }
     }
 }

@@ -11,10 +11,10 @@ C:\Users\Elky\source\repos\PHR-University\PHR-University\bin\Debug\PHR-Universit
 C:\Users\Elky\source\repos\PHR-University\PHR-University\bin\Debug\PHR-University.pdb
 C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR-University.exe
 C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR-University.pdb
-C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.courseSchedue.resources
 C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.AdminPage.resources
-C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.addDropForm.resources
-C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.lookUpclasses.resources
-C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.graduationStatus.resources
-C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.majorMinorSchedule.resources
-C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.transcript.resources
+C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.stdCourseSchedue.resources
+C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.stdAddDropForm.resources
+C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.stdGraduationStatus.resources
+C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.stdLookUpclasses.resources
+C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.stdMajorMinorSchedule.resources
+C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.stdTranscript.resources

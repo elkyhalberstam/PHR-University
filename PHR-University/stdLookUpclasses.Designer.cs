@@ -1,6 +1,6 @@
 ﻿namespace PHR_University
 {
-    partial class courseSchedue
+    partial class stdLookUpclasses
     {
         /// <summary>
         /// Required designer variable.
@@ -28,49 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.selectSemester = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.selectedSemester = new System.Windows.Forms.TextBox();
-            this.semester = new System.Windows.Forms.TextBox();
+            this.semesterText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // selectSemester
+            // 
+            this.selectSemester.FormattingEnabled = true;
+            this.selectSemester.Location = new System.Drawing.Point(416, 52);
+            this.selectSemester.Name = "selectSemester";
+            this.selectSemester.Size = new System.Drawing.Size(207, 28);
+            this.selectSemester.TabIndex = 0;
+            this.selectSemester.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 112);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(802, 390);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(798, 337);
+            this.dataGridView1.TabIndex = 2;
             // 
-            // selectedSemester
+            // semesterText
             // 
-            this.selectedSemester.Location = new System.Drawing.Point(379, 13);
-            this.selectedSemester.Name = "selectedSemester";
-            this.selectedSemester.ReadOnly = true;
-            this.selectedSemester.Size = new System.Drawing.Size(184, 26);
-            this.selectedSemester.TabIndex = 1;
+            this.semesterText.Location = new System.Drawing.Point(180, 52);
+            this.semesterText.Name = "semesterText";
+            this.semesterText.ReadOnly = true;
+            this.semesterText.Size = new System.Drawing.Size(148, 26);
+            this.semesterText.TabIndex = 3;
+            this.semesterText.Text = "Semester";
             // 
-            // semester
-            // 
-            this.semester.BackColor = System.Drawing.SystemColors.Menu;
-            this.semester.Location = new System.Drawing.Point(192, 13);
-            this.semester.Name = "semester";
-            this.semester.Size = new System.Drawing.Size(150, 26);
-            this.semester.TabIndex = 2;
-            this.semester.Text = "Current Semester";
-            // 
-            // courseSchedue
+            // lookUpclasses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.semester);
-            this.Controls.Add(this.selectedSemester);
+            this.Controls.Add(this.semesterText);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "courseSchedue";
+            this.Controls.Add(this.selectSemester);
+            this.Name = "lookUpclasses";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -80,8 +80,8 @@
 
         #endregion
 
+        private System.Windows.Forms.ComboBox selectSemester;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox selectedSemester;
-        private System.Windows.Forms.TextBox semester;
+        private System.Windows.Forms.TextBox semesterText;
     }
 }

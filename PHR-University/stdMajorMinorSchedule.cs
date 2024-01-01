@@ -13,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PHR_University
 {
-    public partial class majorMinorSchedule : Form
+    public partial class stdMajorMinorSchedule : Form
     {
         SqlConnection sqlCon = null;
         int studentID;
@@ -25,7 +25,7 @@ namespace PHR_University
         int chooseMaj;
         int chooseMin;
 
-        public majorMinorSchedule(int studentID)
+        public stdMajorMinorSchedule(int studentID)
         {
             InitializeComponent();
             createDataBaseConnection();
