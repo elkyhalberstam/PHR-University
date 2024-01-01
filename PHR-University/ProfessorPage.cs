@@ -107,7 +107,7 @@ namespace PHR_University
         private void ViewGradesButton_Click_1(object sender, EventArgs e)
         {
             //grades panel view grades
-            Form viewGradesForm = new PViewGradesForm();
+            Form viewGradesForm = new PViewGradesForm(TeacherID);
             viewGradesForm.Show();
         }
 
