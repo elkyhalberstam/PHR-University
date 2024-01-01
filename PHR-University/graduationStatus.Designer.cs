@@ -34,21 +34,24 @@
             this.majorText = new System.Windows.Forms.TextBox();
             this.minor = new System.Windows.Forms.TextBox();
             this.minorText = new System.Windows.Forms.TextBox();
-            this.credtitTotal = new System.Windows.Forms.TextBox();
-            this.creditTargetText = new System.Windows.Forms.TextBox();
+            this.gpaBox = new System.Windows.Forms.TextBox();
+            this.gpaText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // batchStatusText
             // 
             this.batchStatusText.Location = new System.Drawing.Point(105, 104);
             this.batchStatusText.Name = "batchStatusText";
+            this.batchStatusText.ReadOnly = true;
             this.batchStatusText.Size = new System.Drawing.Size(199, 26);
             this.batchStatusText.TabIndex = 7;
+            this.batchStatusText.Text = "Batch Status";
             // 
             // batchStatus
             // 
             this.batchStatus.Location = new System.Drawing.Point(405, 104);
             this.batchStatus.Name = "batchStatus";
+            this.batchStatus.ReadOnly = true;
             this.batchStatus.Size = new System.Drawing.Size(262, 26);
             this.batchStatus.TabIndex = 8;
             // 
@@ -56,6 +59,7 @@
             // 
             this.major.Location = new System.Drawing.Point(405, 175);
             this.major.Name = "major";
+            this.major.ReadOnly = true;
             this.major.Size = new System.Drawing.Size(262, 26);
             this.major.TabIndex = 10;
             // 
@@ -63,13 +67,16 @@
             // 
             this.majorText.Location = new System.Drawing.Point(105, 175);
             this.majorText.Name = "majorText";
+            this.majorText.ReadOnly = true;
             this.majorText.Size = new System.Drawing.Size(199, 26);
             this.majorText.TabIndex = 9;
+            this.majorText.Text = "Major";
             // 
             // minor
             // 
             this.minor.Location = new System.Drawing.Point(405, 243);
             this.minor.Name = "minor";
+            this.minor.ReadOnly = true;
             this.minor.Size = new System.Drawing.Size(262, 26);
             this.minor.TabIndex = 12;
             // 
@@ -77,30 +84,35 @@
             // 
             this.minorText.Location = new System.Drawing.Point(105, 243);
             this.minorText.Name = "minorText";
+            this.minorText.ReadOnly = true;
             this.minorText.Size = new System.Drawing.Size(199, 26);
             this.minorText.TabIndex = 11;
+            this.minorText.Text = "Minor";
             // 
-            // credtitTotal
+            // gpaBox
             // 
-            this.credtitTotal.Location = new System.Drawing.Point(405, 307);
-            this.credtitTotal.Name = "credtitTotal";
-            this.credtitTotal.Size = new System.Drawing.Size(262, 26);
-            this.credtitTotal.TabIndex = 14;
+            this.gpaBox.Location = new System.Drawing.Point(405, 307);
+            this.gpaBox.Name = "gpaBox";
+            this.gpaBox.ReadOnly = true;
+            this.gpaBox.Size = new System.Drawing.Size(262, 26);
+            this.gpaBox.TabIndex = 14;
             // 
-            // creditTargetText
+            // gpaText
             // 
-            this.creditTargetText.Location = new System.Drawing.Point(105, 307);
-            this.creditTargetText.Name = "creditTargetText";
-            this.creditTargetText.Size = new System.Drawing.Size(199, 26);
-            this.creditTargetText.TabIndex = 13;
+            this.gpaText.Location = new System.Drawing.Point(105, 307);
+            this.gpaText.Name = "gpaText";
+            this.gpaText.ReadOnly = true;
+            this.gpaText.Size = new System.Drawing.Size(199, 26);
+            this.gpaText.TabIndex = 13;
+            this.gpaText.Text = "GPA";
             // 
             // graduationStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.credtitTotal);
-            this.Controls.Add(this.creditTargetText);
+            this.Controls.Add(this.gpaBox);
+            this.Controls.Add(this.gpaText);
             this.Controls.Add(this.minor);
             this.Controls.Add(this.minorText);
             this.Controls.Add(this.major);
@@ -122,7 +134,7 @@
         private System.Windows.Forms.TextBox majorText;
         private System.Windows.Forms.TextBox minor;
         private System.Windows.Forms.TextBox minorText;
-        private System.Windows.Forms.TextBox credtitTotal;
-        private System.Windows.Forms.TextBox creditTargetText;
+        private System.Windows.Forms.TextBox gpaBox;
+        private System.Windows.Forms.TextBox gpaText;
     }
 }

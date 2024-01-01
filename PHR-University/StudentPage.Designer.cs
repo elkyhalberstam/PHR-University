@@ -154,7 +154,7 @@
             this.majorMinorScheduleButton.TabIndex = 4;
             this.majorMinorScheduleButton.Text = "Major / Minor Schedule";
             this.majorMinorScheduleButton.UseVisualStyleBackColor = true;
-            this.majorMinorScheduleButton.Click += new System.EventHandler(this.button3_Click);
+            this.majorMinorScheduleButton.Click += new System.EventHandler(this.minorMajor_click);
             // 
             // label2
             // 
@@ -174,7 +174,7 @@
             this.graduationStatusButton.TabIndex = 2;
             this.graduationStatusButton.Text = "Graduation Status";
             this.graduationStatusButton.UseVisualStyleBackColor = true;
-            this.graduationStatusButton.Click += new System.EventHandler(this.button1_Click_2);
+            this.graduationStatusButton.Click += new System.EventHandler(this.graduationStatus_click);
             // 
             // transcriptButton
             // 
@@ -184,7 +184,7 @@
             this.transcriptButton.TabIndex = 1;
             this.transcriptButton.Text = "Transcript";
             this.transcriptButton.UseVisualStyleBackColor = true;
-            this.transcriptButton.Click += new System.EventHandler(this.button2_Click_1);
+            this.transcriptButton.Click += new System.EventHandler(this.transcript_Click);
             // 
             // HomePannel
             // 
@@ -193,7 +193,7 @@
             this.HomePannel.Controls.Add(this.asButton);
             this.HomePannel.Controls.Add(this.courseButton);
             this.HomePannel.Controls.Add(this.emailButton);
-            this.HomePannel.Location = new System.Drawing.Point(2, 134);
+            this.HomePannel.Location = new System.Drawing.Point(2, -9);
             this.HomePannel.Name = "HomePannel";
             this.HomePannel.Size = new System.Drawing.Size(1200, 424);
             this.HomePannel.TabIndex = 5;

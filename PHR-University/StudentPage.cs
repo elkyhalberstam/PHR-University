@@ -71,19 +71,22 @@ namespace PHR_University
             courseSchedule.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void minorMajor_click(object sender, EventArgs e)
         {
-            //trancript
+            Form majorMinorSchedule= new majorMinorSchedule(studentID);
+            majorMinorSchedule.Show();
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void transcript_Click(object sender, EventArgs e)
         {
-            //current grades
+            Form transcript = new transcript(studentID);
+            transcript.Show();
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        private void graduationStatus_click(object sender, EventArgs e)
         {
-            //graduation status
+            Form graduationStat= new graduationStatus(studentID);
+            graduationStat.Show();
         }
 
         private void lookUPclasses_Click(object sender, EventArgs e)
