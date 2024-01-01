@@ -65,7 +65,7 @@ namespace PHR_University
 
             foreach (DataGridViewColumn column in ViewGradesGridView.Columns)
             {
-                column.Width = (ViewGradesGridView.Width / 6); // Set the desired width
+                column.Width = (ViewGradesGridView.Width / 5); // Set the desired width
             }
         }
 

@@ -27,7 +27,7 @@ namespace PHR_University
 
         private void EmailButton_Click(object sender, EventArgs e)
         {
-            Form showEmail = new PEmailForm();
+            Form showEmail = new PEmailForm(TeacherID);
             showEmail.Show();
         }
 

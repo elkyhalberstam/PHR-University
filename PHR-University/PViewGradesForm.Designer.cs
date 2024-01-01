@@ -36,29 +36,32 @@
             // ViewGradesTitleLabel
             // 
             this.ViewGradesTitleLabel.AutoSize = true;
-            this.ViewGradesTitleLabel.Location = new System.Drawing.Point(335, 56);
+            this.ViewGradesTitleLabel.Location = new System.Drawing.Point(251, 46);
+            this.ViewGradesTitleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ViewGradesTitleLabel.Name = "ViewGradesTitleLabel";
-            this.ViewGradesTitleLabel.Size = new System.Drawing.Size(179, 16);
+            this.ViewGradesTitleLabel.Size = new System.Drawing.Size(163, 15);
             this.ViewGradesTitleLabel.TabIndex = 0;
             this.ViewGradesTitleLabel.Text = "Professor View Grades Form";
             // 
             // ViewGradesGridView
             // 
             this.ViewGradesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewGradesGridView.Location = new System.Drawing.Point(101, 110);
+            this.ViewGradesGridView.Location = new System.Drawing.Point(187, 106);
+            this.ViewGradesGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ViewGradesGridView.Name = "ViewGradesGridView";
             this.ViewGradesGridView.RowHeadersWidth = 51;
             this.ViewGradesGridView.RowTemplate.Height = 24;
-            this.ViewGradesGridView.Size = new System.Drawing.Size(602, 285);
+            this.ViewGradesGridView.Size = new System.Drawing.Size(289, 192);
             this.ViewGradesGridView.TabIndex = 1;
             // 
             // PViewGradesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.ViewGradesGridView);
             this.Controls.Add(this.ViewGradesTitleLabel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PViewGradesForm";
             this.Text = "PViewGradesForm";
             ((System.ComponentModel.ISupportInitialize)(this.ViewGradesGridView)).EndInit();
