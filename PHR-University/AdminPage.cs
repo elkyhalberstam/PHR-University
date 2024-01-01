@@ -12,14 +12,16 @@ using System.Windows.Forms;
 
 namespace PHR_University
 {
+    
     public partial class AdminPage : Form
     {
+        int adminID;
         SqlConnection sqlCon = null;
-        public AdminPage()
+        public AdminPage(int adminID)
         {
             InitializeComponent();
             createDataBaseConnection();
-        
+            this.adminID = adminID;
         }
 
         private Boolean createDataBaseConnection()

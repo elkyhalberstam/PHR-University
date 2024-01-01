@@ -1,6 +1,6 @@
 ﻿namespace PHR_University
 {
-    partial class courseSchedue
+    partial class transcript
     {
         /// <summary>
         /// Required designer variable.
@@ -29,49 +29,47 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.selectedSemester = new System.Windows.Forms.TextBox();
-            this.semester = new System.Windows.Forms.TextBox();
+            this.creditTarget = new System.Windows.Forms.TextBox();
+            this.totalCredits = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 72);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(802, 390);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 378);
             this.dataGridView1.TabIndex = 0;
             // 
-            // selectedSemester
+            // creditTarget
             // 
-            this.selectedSemester.Location = new System.Drawing.Point(379, 13);
-            this.selectedSemester.Name = "selectedSemester";
-            this.selectedSemester.ReadOnly = true;
-            this.selectedSemester.Size = new System.Drawing.Size(184, 26);
-            this.selectedSemester.TabIndex = 1;
+            this.creditTarget.Location = new System.Drawing.Point(90, 33);
+            this.creditTarget.Name = "creditTarget";
+            this.creditTarget.Size = new System.Drawing.Size(280, 26);
+            this.creditTarget.TabIndex = 1;
+            this.creditTarget.Text = "Required Crudetis for Graduation: 120";
             // 
-            // semester
+            // totalCredits
             // 
-            this.semester.BackColor = System.Drawing.SystemColors.Menu;
-            this.semester.Location = new System.Drawing.Point(192, 13);
-            this.semester.Name = "semester";
-            this.semester.Size = new System.Drawing.Size(150, 26);
-            this.semester.TabIndex = 2;
-            this.semester.Text = "Current Semester";
+            this.totalCredits.Location = new System.Drawing.Point(390, 33);
+            this.totalCredits.Name = "totalCredits";
+            this.totalCredits.ReadOnly = true;
+            this.totalCredits.Size = new System.Drawing.Size(334, 26);
+            this.totalCredits.TabIndex = 2;
             // 
-            // courseSchedue
+            // transcript
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.semester);
-            this.Controls.Add(this.selectedSemester);
+            this.Controls.Add(this.totalCredits);
+            this.Controls.Add(this.creditTarget);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "courseSchedue";
-            this.Text = "Form1";
+            this.Name = "transcript";
+            this.Text = "transcript";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -81,7 +79,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox selectedSemester;
-        private System.Windows.Forms.TextBox semester;
+        private System.Windows.Forms.TextBox creditTarget;
+        private System.Windows.Forms.TextBox totalCredits;
     }
 }

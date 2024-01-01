@@ -28,73 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.addORdrop = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.submit = new System.Windows.Forms.Button();
+            this.classSelect = new System.Windows.Forms.ComboBox();
+            this.dropSelect = new System.Windows.Forms.RadioButton();
+            this.semesterSelect = new System.Windows.Forms.ComboBox();
+            this.addSelect = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // submit
             // 
-            this.button1.Location = new System.Drawing.Point(96, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.submit.Location = new System.Drawing.Point(96, 309);
+            this.submit.Name = "submit";
+            this.submit.Size = new System.Drawing.Size(90, 39);
+            this.submit.TabIndex = 0;
+            this.submit.Text = "Submit";
+            this.submit.UseVisualStyleBackColor = true;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
-            // comboBox1
+            // classSelect
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(302, 87);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(254, 28);
-            this.comboBox1.TabIndex = 1;
+            this.classSelect.FormattingEnabled = true;
+            this.classSelect.Location = new System.Drawing.Point(278, 87);
+            this.classSelect.Name = "classSelect";
+            this.classSelect.Size = new System.Drawing.Size(254, 28);
+            this.classSelect.TabIndex = 1;
+            this.classSelect.SelectedIndexChanged += new System.EventHandler(this.classSelectChange);
             // 
-            // addORdrop
+            // dropSelect
             // 
-            this.addORdrop.AutoSize = true;
-            this.addORdrop.Location = new System.Drawing.Point(96, 139);
-            this.addORdrop.Name = "addORdrop";
-            this.addORdrop.Size = new System.Drawing.Size(106, 24);
-            this.addORdrop.TabIndex = 2;
-            this.addORdrop.TabStop = true;
-            this.addORdrop.Text = "Add Class\r\n";
-            this.addORdrop.UseVisualStyleBackColor = true;
-            this.addORdrop.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.dropSelect.AutoSize = true;
+            this.dropSelect.Location = new System.Drawing.Point(96, 181);
+            this.dropSelect.Name = "dropSelect";
+            this.dropSelect.Size = new System.Drawing.Size(112, 24);
+            this.dropSelect.TabIndex = 3;
+            this.dropSelect.TabStop = true;
+            this.dropSelect.Text = "Drop Class";
+            this.dropSelect.UseVisualStyleBackColor = true;
+            this.dropSelect.CheckedChanged += new System.EventHandler(this.dropSelectChange);
             // 
-            // radioButton1
+            // semesterSelect
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(96, 181);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(112, 24);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Drop Class";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.semesterSelect.FormattingEnabled = true;
+            this.semesterSelect.Location = new System.Drawing.Point(565, 87);
+            this.semesterSelect.Name = "semesterSelect";
+            this.semesterSelect.Size = new System.Drawing.Size(199, 28);
+            this.semesterSelect.TabIndex = 4;
+            this.semesterSelect.SelectedIndexChanged += new System.EventHandler(this.semesterSelectChange);
             // 
-            // comboBox2
+            // addSelect
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(589, 87);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 28);
-            this.comboBox2.TabIndex = 4;
+            this.addSelect.AutoSize = true;
+            this.addSelect.Location = new System.Drawing.Point(96, 139);
+            this.addSelect.Name = "addSelect";
+            this.addSelect.Size = new System.Drawing.Size(106, 24);
+            this.addSelect.TabIndex = 2;
+            this.addSelect.TabStop = true;
+            this.addSelect.Text = "Add Class\r\n";
+            this.addSelect.UseVisualStyleBackColor = true;
+            this.addSelect.CheckedChanged += new System.EventHandler(this.addSelectChange);
             // 
-            // Form1
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(278, 148);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(486, 271);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // addDropForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.addORdrop);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.semesterSelect);
+            this.Controls.Add(this.dropSelect);
+            this.Controls.Add(this.addSelect);
+            this.Controls.Add(this.classSelect);
+            this.Controls.Add(this.submit);
+            this.Name = "addDropForm";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,10 +120,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton addORdrop;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.ComboBox classSelect;
+        private System.Windows.Forms.RadioButton dropSelect;
+        private System.Windows.Forms.ComboBox semesterSelect;
+        private System.Windows.Forms.RadioButton addSelect;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

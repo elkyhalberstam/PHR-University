@@ -37,10 +37,10 @@
             this.addDropButton = new System.Windows.Forms.Button();
             this.lookUPclasses = new System.Windows.Forms.Button();
             this.academicPanel = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.majorMinorScheduleButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.graduationStatusButton = new System.Windows.Forms.Button();
+            this.transcriptButton = new System.Windows.Forms.Button();
             this.HomePannel = new System.Windows.Forms.Panel();
             this.homeLabel = new System.Windows.Forms.Label();
             this.asButton = new System.Windows.Forms.Button();
@@ -137,24 +137,24 @@
             // academicPanel
             // 
             this.academicPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.academicPanel.Controls.Add(this.button3);
+            this.academicPanel.Controls.Add(this.majorMinorScheduleButton);
             this.academicPanel.Controls.Add(this.label2);
-            this.academicPanel.Controls.Add(this.button1);
-            this.academicPanel.Controls.Add(this.button2);
+            this.academicPanel.Controls.Add(this.graduationStatusButton);
+            this.academicPanel.Controls.Add(this.transcriptButton);
             this.academicPanel.Location = new System.Drawing.Point(3, 133);
             this.academicPanel.Name = "academicPanel";
             this.academicPanel.Size = new System.Drawing.Size(1200, 424);
             this.academicPanel.TabIndex = 5;
             // 
-            // button3
+            // majorMinorScheduleButton
             // 
-            this.button3.Location = new System.Drawing.Point(514, 240);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 85);
-            this.button3.TabIndex = 4;
-            this.button3.Text = " Transcript";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.majorMinorScheduleButton.Location = new System.Drawing.Point(514, 240);
+            this.majorMinorScheduleButton.Name = "majorMinorScheduleButton";
+            this.majorMinorScheduleButton.Size = new System.Drawing.Size(173, 85);
+            this.majorMinorScheduleButton.TabIndex = 4;
+            this.majorMinorScheduleButton.Text = "Major / Minor Schedule";
+            this.majorMinorScheduleButton.UseVisualStyleBackColor = true;
+            this.majorMinorScheduleButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
@@ -166,25 +166,25 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "ACADEMICS";
             // 
-            // button1
+            // graduationStatusButton
             // 
-            this.button1.Location = new System.Drawing.Point(865, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 85);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Graduation Status";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.graduationStatusButton.Location = new System.Drawing.Point(865, 240);
+            this.graduationStatusButton.Name = "graduationStatusButton";
+            this.graduationStatusButton.Size = new System.Drawing.Size(173, 85);
+            this.graduationStatusButton.TabIndex = 2;
+            this.graduationStatusButton.Text = "Graduation Status";
+            this.graduationStatusButton.UseVisualStyleBackColor = true;
+            this.graduationStatusButton.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // button2
+            // transcriptButton
             // 
-            this.button2.Location = new System.Drawing.Point(171, 240);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 85);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Current Grades";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.transcriptButton.Location = new System.Drawing.Point(172, 240);
+            this.transcriptButton.Name = "transcriptButton";
+            this.transcriptButton.Size = new System.Drawing.Size(173, 85);
+            this.transcriptButton.TabIndex = 1;
+            this.transcriptButton.Text = "Transcript";
+            this.transcriptButton.UseVisualStyleBackColor = true;
+            this.transcriptButton.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // HomePannel
             // 
@@ -193,7 +193,7 @@
             this.HomePannel.Controls.Add(this.asButton);
             this.HomePannel.Controls.Add(this.courseButton);
             this.HomePannel.Controls.Add(this.emailButton);
-            this.HomePannel.Location = new System.Drawing.Point(2, 135);
+            this.HomePannel.Location = new System.Drawing.Point(2, 134);
             this.HomePannel.Name = "HomePannel";
             this.HomePannel.Size = new System.Drawing.Size(1200, 424);
             this.HomePannel.TabIndex = 5;
@@ -271,10 +271,10 @@
         private System.Windows.Forms.Button addDropButton;
         private System.Windows.Forms.Button lookUPclasses;
         private System.Windows.Forms.Panel academicPanel;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button majorMinorScheduleButton;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button graduationStatusButton;
+        private System.Windows.Forms.Button transcriptButton;
         private System.Windows.Forms.Panel HomePannel;
         private System.Windows.Forms.Button asButton;
         private System.Windows.Forms.Button courseButton;

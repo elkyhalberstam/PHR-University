@@ -12,10 +12,11 @@ namespace PHR_University
 {
     public partial class StudentPage : Form
     {
-        public StudentPage()
+        int studentID;
+        public StudentPage(int studentID)
         {
             InitializeComponent();
-            
+            this.studentID = studentID;
         }
 
         private void StudentPage_Load(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace PHR_University
 
         private void courseButton_Click_1(object sender, EventArgs e)
         {
-            Form courseSchedule = new courseSchedue();
+            Form courseSchedule = new courseSchedue(studentID);
             courseSchedule.Show();
         }
 
@@ -95,7 +96,7 @@ namespace PHR_University
         private void addDropButton_Click(object sender, EventArgs e)
         {
             //add/drop button
-            Form addDrop = new addDropForm();
+            Form addDrop = new addDropForm(studentID);
             addDrop.Show();
         }
 
@@ -111,7 +112,7 @@ namespace PHR_University
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form courseSchedule = new courseSchedue();
+            Form courseSchedule = new courseSchedue(studentID);
             courseSchedule.Show();
         }
 

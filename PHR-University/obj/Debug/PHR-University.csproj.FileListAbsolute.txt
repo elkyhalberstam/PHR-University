@@ -15,3 +15,6 @@ C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_Universit
 C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.AdminPage.resources
 C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.addDropForm.resources
 C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.lookUpclasses.resources
+C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.graduationStatus.resources
+C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.majorMinorSchedule.resources
+C:\Users\Elky\source\repos\PHR-University\PHR-University\obj\Debug\PHR_University.transcript.resources
