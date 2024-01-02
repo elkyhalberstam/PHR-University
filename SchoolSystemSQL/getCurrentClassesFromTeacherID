@@ -1,0 +1,14 @@
+create procedure getCurrentClasses (@teacherID int) 
+AS 
+(
+	SELECT name, 
+			classID
+	FROM course 
+	JOIN class ON course.courseID = class.courseID 
+	WHERE class.teacherID = @teacherID
+)
+
+select * from class
+select * from course
+exec getCurrentClasses 3
+
