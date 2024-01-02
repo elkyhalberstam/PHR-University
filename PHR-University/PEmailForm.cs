@@ -12,18 +12,18 @@ using System.Windows.Forms;
 
 namespace PHR_University
 {
-    public partial class AdminPage : Form
+    public partial class PEmailForm : Form
     {
         SqlConnection sqlCon = null;
-        int AdminId;
-        public AdminPage(int adminId)
+        int TeacherID;
+        public PEmailForm(int teacherID)
         {
             InitializeComponent();
-            createDataBaseConnection();
-            AdminId = adminId;
+            TeacherID = teacherID;
+            CreateDatabaseConnection();
+            PopulateEmailView();
         }
-
-        private Boolean createDataBaseConnection()
+        private Boolean CreateDatabaseConnection()
         {
             try
             {
@@ -35,7 +35,7 @@ namespace PHR_University
                 //  typical connection string:
                 //   sqlCon = new SqlConnection("Server=DESKTOP-17VOE83;Database=Finance;Trusted_Connection=True;");
                 //string strConnect = $"Server={strServer};Database={strDatabase};Trusted_Connection=True;";
-                string strConnect = "Server=DESKTOP-2NS3C4L\\SQLEXPRESS;Database=SchoolSystem;Trusted_Connection=True;";
+                string strConnect = "Server=DESKTOP-ID4TL0U\\SQLExpress;Database=SchoolSystem;Trusted_Connection=True;";
 
                 sqlCon = new SqlConnection(strConnect);
                 sqlCon.Open();
@@ -47,6 +47,27 @@ namespace PHR_University
             }
             return false;
         }
+        private void PopulateEmailView()
+        {
+            SqlCommand sqlCmd = new SqlCommand("getTeacherEmail", sqlCon);
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.Add("@teacherID", System.Data.SqlDbType.Int).Value = TeacherID;
+            sqlCmd.ExecuteNonQuery();
+            SqlDataAdapter da = new SqlDataAdapter(sqlCmd);
+            DataSet dataset = new DataSet();
+            da.Fill(dataset, "Email");
+            sqlCmd.ExecuteNonQuery();
+            EmailGridView.AutoGenerateColumns = true;
+            EmailGridView.DataSource = dataset.Tables["Email"];
+            EmailGridView.ColumnHeadersVisible = true;
+            EmailGridView.RowHeadersVisible = false;
+
+            foreach (DataGridViewColumn column in EmailGridView.Columns)
+            {
+                column.Width = (EmailGridView.Width /2); // Set the desired width
+            }
+        }
+
 
     }
 }

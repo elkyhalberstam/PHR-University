@@ -28,132 +28,259 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.HomePannel = new System.Windows.Forms.Panel();
-            this.homeLabel = new System.Windows.Forms.Label();
-            this.asButton = new System.Windows.Forms.Button();
-            this.courseButton = new System.Windows.Forms.Button();
-            this.emailButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.menueAcademics = new System.Windows.Forms.Button();
-            this.menuRegistratiom = new System.Windows.Forms.Button();
-            this.menuHome = new System.Windows.Forms.Button();
-            this.HomePannel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.MenuPanel = new System.Windows.Forms.Panel();
+            this.MenuAssignmentsButton = new System.Windows.Forms.Button();
+            this.MenuGradesButton = new System.Windows.Forms.Button();
+            this.MenuHomeButton = new System.Windows.Forms.Button();
+            this.EnterGradesButton = new System.Windows.Forms.Button();
+            this.ViewGradesButton = new System.Windows.Forms.Button();
+            this.EmailButton = new System.Windows.Forms.Button();
+            this.CurrentSchedButton = new System.Windows.Forms.Button();
+            this.AcademicSchedButton = new System.Windows.Forms.Button();
+            this.HomeTextLabel = new System.Windows.Forms.Label();
+            this.HomePanel = new System.Windows.Forms.Panel();
+            this.ProfessorGradesPanel = new System.Windows.Forms.Panel();
+            this.ProfessorGradesLabel = new System.Windows.Forms.Label();
+            this.ViewClassListButton = new System.Windows.Forms.Button();
+            this.ProfessorAssignmentsPanel = new System.Windows.Forms.Panel();
+            this.ProfessorAssignmentsLabel = new System.Windows.Forms.Label();
+            this.ViewSubmissionsButton = new System.Windows.Forms.Button();
+            this.MenuPanel.SuspendLayout();
+            this.HomePanel.SuspendLayout();
+            this.ProfessorGradesPanel.SuspendLayout();
+            this.ProfessorAssignmentsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // HomePannel
+            // MenuPanel
             // 
-            this.HomePannel.BackColor = System.Drawing.SystemColors.Control;
-            this.HomePannel.Controls.Add(this.homeLabel);
-            this.HomePannel.Controls.Add(this.asButton);
-            this.HomePannel.Controls.Add(this.courseButton);
-            this.HomePannel.Controls.Add(this.emailButton);
-            this.HomePannel.Location = new System.Drawing.Point(0, 150);
-            this.HomePannel.Name = "HomePannel";
-            this.HomePannel.Size = new System.Drawing.Size(1200, 424);
-            this.HomePannel.TabIndex = 6;
+            this.MenuPanel.Controls.Add(this.MenuAssignmentsButton);
+            this.MenuPanel.Controls.Add(this.MenuGradesButton);
+            this.MenuPanel.Controls.Add(this.MenuHomeButton);
+            this.MenuPanel.Location = new System.Drawing.Point(-1, 1);
+            this.MenuPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MenuPanel.Name = "MenuPanel";
+            this.MenuPanel.Size = new System.Drawing.Size(1067, 36);
+            this.MenuPanel.TabIndex = 4;
             // 
-            // homeLabel
+            // MenuAssignmentsButton
             // 
-            this.homeLabel.AutoSize = true;
-            this.homeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeLabel.Location = new System.Drawing.Point(487, 132);
-            this.homeLabel.Name = "homeLabel";
-            this.homeLabel.Size = new System.Drawing.Size(210, 69);
-            this.homeLabel.TabIndex = 3;
-            this.homeLabel.Text = "HOME";
+            this.MenuAssignmentsButton.Location = new System.Drawing.Point(878, 2);
+            this.MenuAssignmentsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MenuAssignmentsButton.Name = "MenuAssignmentsButton";
+            this.MenuAssignmentsButton.Size = new System.Drawing.Size(154, 31);
+            this.MenuAssignmentsButton.TabIndex = 6;
+            this.MenuAssignmentsButton.Text = "Assignments";
+            this.MenuAssignmentsButton.UseVisualStyleBackColor = true;
+            this.MenuAssignmentsButton.Click += new System.EventHandler(this.MenuAssignmentsButton_Click);
             // 
-            // asButton
+            // MenuGradesButton
             // 
-            this.asButton.Location = new System.Drawing.Point(853, 243);
-            this.asButton.Name = "asButton";
-            this.asButton.Size = new System.Drawing.Size(173, 85);
-            this.asButton.TabIndex = 2;
-            this.asButton.Text = "Academic Schedule";
-            this.asButton.UseVisualStyleBackColor = true;
+            this.MenuGradesButton.Location = new System.Drawing.Point(467, 3);
+            this.MenuGradesButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MenuGradesButton.Name = "MenuGradesButton";
+            this.MenuGradesButton.Size = new System.Drawing.Size(154, 31);
+            this.MenuGradesButton.TabIndex = 5;
+            this.MenuGradesButton.Text = "Grades/ Roster";
+            this.MenuGradesButton.UseVisualStyleBackColor = true;
+            this.MenuGradesButton.Click += new System.EventHandler(this.MenuGradesButton_Click);
             // 
-            // courseButton
+            // MenuHomeButton
             // 
-            this.courseButton.Location = new System.Drawing.Point(499, 243);
-            this.courseButton.Name = "courseButton";
-            this.courseButton.Size = new System.Drawing.Size(173, 85);
-            this.courseButton.TabIndex = 1;
-            this.courseButton.Text = "Course Schedule";
-            this.courseButton.UseVisualStyleBackColor = true;
+            this.MenuHomeButton.Location = new System.Drawing.Point(52, 4);
+            this.MenuHomeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MenuHomeButton.Name = "MenuHomeButton";
+            this.MenuHomeButton.Size = new System.Drawing.Size(154, 31);
+            this.MenuHomeButton.TabIndex = 4;
+            this.MenuHomeButton.Text = "Home";
+            this.MenuHomeButton.UseVisualStyleBackColor = true;
+            this.MenuHomeButton.Click += new System.EventHandler(this.MenuHomeButton_Click);
             // 
-            // emailButton
+            // EnterGradesButton
             // 
-            this.emailButton.Location = new System.Drawing.Point(171, 243);
-            this.emailButton.Name = "emailButton";
-            this.emailButton.Size = new System.Drawing.Size(173, 85);
-            this.emailButton.TabIndex = 0;
-            this.emailButton.Text = "Email";
-            this.emailButton.UseVisualStyleBackColor = true;
+            this.EnterGradesButton.Location = new System.Drawing.Point(249, 206);
+            this.EnterGradesButton.Name = "EnterGradesButton";
+            this.EnterGradesButton.Size = new System.Drawing.Size(180, 75);
+            this.EnterGradesButton.TabIndex = 0;
+            this.EnterGradesButton.Text = "Enter Grades";
+            this.EnterGradesButton.Click += new System.EventHandler(this.EnterGradesButton_Click);
             // 
-            // panel1
+            // ViewGradesButton
             // 
-            this.panel1.Controls.Add(this.menueAcademics);
-            this.panel1.Controls.Add(this.menuRegistratiom);
-            this.panel1.Controls.Add(this.menuHome);
-            this.panel1.Location = new System.Drawing.Point(-1, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 45);
-            this.panel1.TabIndex = 4;
+            this.ViewGradesButton.Location = new System.Drawing.Point(490, 203);
+            this.ViewGradesButton.Name = "ViewGradesButton";
+            this.ViewGradesButton.Size = new System.Drawing.Size(181, 78);
+            this.ViewGradesButton.TabIndex = 0;
+            this.ViewGradesButton.Text = "View Grades";
+            this.ViewGradesButton.Click += new System.EventHandler(this.ViewGradesButton_Click_1);
             // 
-            // menueAcademics
+            // EmailButton
             // 
-            this.menueAcademics.Location = new System.Drawing.Point(988, 3);
-            this.menueAcademics.Name = "menueAcademics";
-            this.menueAcademics.Size = new System.Drawing.Size(173, 39);
-            this.menueAcademics.TabIndex = 6;
-            this.menueAcademics.Text = "Academics";
-            this.menueAcademics.UseVisualStyleBackColor = true;
+            this.EmailButton.Location = new System.Drawing.Point(152, 194);
+            this.EmailButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.EmailButton.Name = "EmailButton";
+            this.EmailButton.Size = new System.Drawing.Size(154, 68);
+            this.EmailButton.TabIndex = 0;
+            this.EmailButton.Text = "Email";
+            this.EmailButton.UseVisualStyleBackColor = true;
+            this.EmailButton.Click += new System.EventHandler(this.EmailButton_Click);
             // 
-            // menuRegistratiom
+            // CurrentSchedButton
             // 
-            this.menuRegistratiom.Location = new System.Drawing.Point(514, 3);
-            this.menuRegistratiom.Name = "menuRegistratiom";
-            this.menuRegistratiom.Size = new System.Drawing.Size(173, 39);
-            this.menuRegistratiom.TabIndex = 5;
-            this.menuRegistratiom.Text = "Registration";
-            this.menuRegistratiom.UseVisualStyleBackColor = true;
+            this.CurrentSchedButton.Location = new System.Drawing.Point(450, 194);
+            this.CurrentSchedButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CurrentSchedButton.Name = "CurrentSchedButton";
+            this.CurrentSchedButton.Size = new System.Drawing.Size(154, 68);
+            this.CurrentSchedButton.TabIndex = 1;
+            this.CurrentSchedButton.Text = "Current Schedule ";
+            this.CurrentSchedButton.UseVisualStyleBackColor = true;
+            this.CurrentSchedButton.Click += new System.EventHandler(this.CurrentSchedButton_Click);
             // 
-            // menuHome
+            // AcademicSchedButton
             // 
-            this.menuHome.Location = new System.Drawing.Point(59, 5);
-            this.menuHome.Name = "menuHome";
-            this.menuHome.Size = new System.Drawing.Size(173, 39);
-            this.menuHome.TabIndex = 4;
-            this.menuHome.Text = "Home";
-            this.menuHome.UseVisualStyleBackColor = true;
+            this.AcademicSchedButton.Location = new System.Drawing.Point(758, 194);
+            this.AcademicSchedButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AcademicSchedButton.Name = "AcademicSchedButton";
+            this.AcademicSchedButton.Size = new System.Drawing.Size(154, 68);
+            this.AcademicSchedButton.TabIndex = 2;
+            this.AcademicSchedButton.Text = "Academic Schedule";
+            this.AcademicSchedButton.UseVisualStyleBackColor = true;
+            this.AcademicSchedButton.Click += new System.EventHandler(this.AcademicSchedButton_Click);
+            // 
+            // HomeTextLabel
+            // 
+            this.HomeTextLabel.AutoSize = true;
+            this.HomeTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeTextLabel.Location = new System.Drawing.Point(300, 87);
+            this.HomeTextLabel.Name = "HomeTextLabel";
+            this.HomeTextLabel.Size = new System.Drawing.Size(501, 58);
+            this.HomeTextLabel.TabIndex = 3;
+            this.HomeTextLabel.Text = "PROFESSOR HOME";
+            this.HomeTextLabel.Click += new System.EventHandler(this.HomeTextLabel_Click);
+            // 
+            // HomePanel
+            // 
+            this.HomePanel.BackColor = System.Drawing.SystemColors.Control;
+            this.HomePanel.Controls.Add(this.HomeTextLabel);
+            this.HomePanel.Controls.Add(this.AcademicSchedButton);
+            this.HomePanel.Controls.Add(this.CurrentSchedButton);
+            this.HomePanel.Controls.Add(this.EmailButton);
+            this.HomePanel.Location = new System.Drawing.Point(-1, 126);
+            this.HomePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HomePanel.Name = "HomePanel";
+            this.HomePanel.Size = new System.Drawing.Size(1067, 339);
+            this.HomePanel.TabIndex = 6;
+            this.HomePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HomePanel_Paint);
+            // 
+            // ProfessorGradesPanel
+            // 
+            this.ProfessorGradesPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.ProfessorGradesPanel.Controls.Add(this.ProfessorGradesLabel);
+            this.ProfessorGradesPanel.Controls.Add(this.ViewGradesButton);
+            this.ProfessorGradesPanel.Controls.Add(this.EnterGradesButton);
+            this.ProfessorGradesPanel.Controls.Add(this.ViewClassListButton);
+            this.ProfessorGradesPanel.Location = new System.Drawing.Point(-1, 124);
+            this.ProfessorGradesPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ProfessorGradesPanel.Name = "ProfessorGradesPanel";
+            this.ProfessorGradesPanel.Size = new System.Drawing.Size(1067, 339);
+            this.ProfessorGradesPanel.TabIndex = 7;
+            this.ProfessorGradesPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ProfessorGradesPanel_Paint);
+            // 
+            // ProfessorGradesLabel
+            // 
+            this.ProfessorGradesLabel.AutoSize = true;
+            this.ProfessorGradesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProfessorGradesLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ProfessorGradesLabel.Location = new System.Drawing.Point(127, 87);
+            this.ProfessorGradesLabel.Name = "ProfessorGradesLabel";
+            this.ProfessorGradesLabel.Size = new System.Drawing.Size(796, 58);
+            this.ProfessorGradesLabel.TabIndex = 3;
+            this.ProfessorGradesLabel.Text = "PROFESSOR GRADES/ ROSTER";
+            this.ProfessorGradesLabel.Click += new System.EventHandler(this.ProfessorGradesLabel_Click);
+            // 
+            // ViewClassListButton
+            // 
+            this.ViewClassListButton.Location = new System.Drawing.Point(728, 204);
+            this.ViewClassListButton.Name = "ViewClassListButton";
+            this.ViewClassListButton.Size = new System.Drawing.Size(181, 78);
+            this.ViewClassListButton.TabIndex = 4;
+            this.ViewClassListButton.Text = "View Class List";
+            this.ViewClassListButton.Click += new System.EventHandler(this.ViewClassListButton_Click);
+            // 
+            // ProfessorAssignmentsPanel
+            // 
+            this.ProfessorAssignmentsPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.ProfessorAssignmentsPanel.Controls.Add(this.ProfessorAssignmentsLabel);
+            this.ProfessorAssignmentsPanel.Controls.Add(this.ViewSubmissionsButton);
+            this.ProfessorAssignmentsPanel.Location = new System.Drawing.Point(3, 132);
+            this.ProfessorAssignmentsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ProfessorAssignmentsPanel.Name = "ProfessorAssignmentsPanel";
+            this.ProfessorAssignmentsPanel.Size = new System.Drawing.Size(1067, 339);
+            this.ProfessorAssignmentsPanel.TabIndex = 9;
+            // 
+            // ProfessorAssignmentsLabel
+            // 
+            this.ProfessorAssignmentsLabel.AutoSize = true;
+            this.ProfessorAssignmentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProfessorAssignmentsLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ProfessorAssignmentsLabel.Location = new System.Drawing.Point(300, 87);
+            this.ProfessorAssignmentsLabel.Name = "ProfessorAssignmentsLabel";
+            this.ProfessorAssignmentsLabel.Size = new System.Drawing.Size(714, 58);
+            this.ProfessorAssignmentsLabel.TabIndex = 3;
+            this.ProfessorAssignmentsLabel.Text = "PROFESSOR ASSIGNMENTS";
+            // 
+            // ViewSubmissionsButton
+            // 
+            this.ViewSubmissionsButton.Location = new System.Drawing.Point(528, 186);
+            this.ViewSubmissionsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ViewSubmissionsButton.Name = "ViewSubmissionsButton";
+            this.ViewSubmissionsButton.Size = new System.Drawing.Size(154, 68);
+            this.ViewSubmissionsButton.TabIndex = 1;
+            this.ViewSubmissionsButton.Text = "View Submissions";
+            this.ViewSubmissionsButton.UseVisualStyleBackColor = true;
+            this.ViewSubmissionsButton.Click += new System.EventHandler(this.ViewSubmissionsButton_Click);
             // 
             // ProfessorPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.HomePannel);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.MenuPanel);
+            this.Controls.Add(this.HomePanel);
+            this.Controls.Add(this.ProfessorAssignmentsPanel);
+            this.Controls.Add(this.ProfessorGradesPanel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProfessorPage";
             this.Text = "ProfessorPage";
-            this.HomePannel.ResumeLayout(false);
-            this.HomePannel.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProfessorPage_FormClosing);
+            this.MenuPanel.ResumeLayout(false);
+            this.HomePanel.ResumeLayout(false);
+            this.HomePanel.PerformLayout();
+            this.ProfessorGradesPanel.ResumeLayout(false);
+            this.ProfessorGradesPanel.PerformLayout();
+            this.ProfessorAssignmentsPanel.ResumeLayout(false);
+            this.ProfessorAssignmentsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel HomePannel;
-        private System.Windows.Forms.Label homeLabel;
-        private System.Windows.Forms.Button asButton;
-        private System.Windows.Forms.Button courseButton;
-        private System.Windows.Forms.Button emailButton;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button menueAcademics;
-        private System.Windows.Forms.Button menuRegistratiom;
-        private System.Windows.Forms.Button menuHome;
+        private System.Windows.Forms.Panel MenuPanel;
+        private System.Windows.Forms.Button MenuAssignmentsButton;
+        private System.Windows.Forms.Button MenuGradesButton;
+        private System.Windows.Forms.Button MenuHomeButton;
+        private System.Windows.Forms.Button EnterGradesButton;
+        private System.Windows.Forms.Button ViewGradesButton;
+        private System.Windows.Forms.Button EmailButton;
+        private System.Windows.Forms.Button CurrentSchedButton;
+        private System.Windows.Forms.Button AcademicSchedButton;
+        private System.Windows.Forms.Label HomeTextLabel;
+        private System.Windows.Forms.Panel HomePanel;
+        private System.Windows.Forms.Panel ProfessorGradesPanel;
+        private System.Windows.Forms.Label ProfessorGradesLabel;
+        private System.Windows.Forms.Panel ProfessorAssignmentsPanel;
+        private System.Windows.Forms.Label ProfessorAssignmentsLabel;
+        private System.Windows.Forms.Button ViewSubmissionsButton;
+        private System.Windows.Forms.Button ViewClassListButton;
     }
 }

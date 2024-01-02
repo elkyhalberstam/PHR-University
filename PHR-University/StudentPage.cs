@@ -12,10 +12,11 @@ namespace PHR_University
 {
     public partial class StudentPage : Form
     {
-        public StudentPage()
+        int studentID;
+        public StudentPage(int studentID)
         {
             InitializeComponent();
-            
+            this.studentID = studentID;
         }
 
         private void StudentPage_Load(object sender, EventArgs e)
@@ -52,9 +53,6 @@ namespace PHR_University
             academicPanel.Show();
             regisratinPanel.Hide();
             HomePannel.Hide();
-
-
-
 
         }
 
