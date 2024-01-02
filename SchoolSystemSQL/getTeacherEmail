@@ -1,0 +1,12 @@
+create proc getTeacherEmail (@TeacherID int)
+AS 
+(
+	select firstName + ' ' + lastName AS [Name],
+			email
+	FROM Vperson 
+	JOIN Vteacher ON Vteacher.personID = Vperson.personID
+	WHERE Vteacher.teacherID = @TeacherID
+)
+
+select * from person
+exec getTeacherEmail 2
