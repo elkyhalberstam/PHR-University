@@ -1,0 +1,4 @@
+Alter PROC updateBatchStatus(@studentID int, @batchStatus varchar(30)) as
+UPDATE studentDynamic 
+	SET batchStatus = @batchStatus
+	WHERE studentDynamic.studentID = @studentID
