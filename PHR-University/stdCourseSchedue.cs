@@ -52,7 +52,7 @@ namespace PHR_University
         private Boolean loadCurrentSchedule()
         {
 
-            SqlCommand sqlCmd = new SqlCommand("getCurrentSemester", sqlCon);
+            SqlCommand sqlCmd = new SqlCommand("getCurrentSemesterSTD", sqlCon);
             sqlCmd.CommandType = CommandType.StoredProcedure;
             sqlCmd.Parameters.Add("@studentID", System.Data.SqlDbType.VarChar).Value = studentID;
             sqlCmd.ExecuteNonQuery();

@@ -50,7 +50,7 @@ namespace PHR_University
 
         private void stdMinorMajor_click(object sender, EventArgs e)
         {
-            Form majorMinorSchedule= new stdMajorMinorSchedule(studentID);
+            Form majorMinorSchedule= new stdMajorMinorStatus(studentID);
             majorMinorSchedule.Show();
         }
 
