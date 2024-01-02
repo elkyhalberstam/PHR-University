@@ -1,0 +1,19 @@
+
+CREATE PROC getStudentList(@classID int)
+AS
+(
+	SELECT Vstudent.studentID, 
+		   Vperson.firstname +  ' ' + Vperson.lastname AS [name]
+	FROM Vclass 
+	JOIN VstudentClassList ON Vclass.classID = VstudentClassList.classID
+	JOIN Vstudent ON VstudentClassList.studentID = Vstudent.studentID
+	JOIN Vperson ON Vstudent.personID = Vperson.personID 
+	WHERE Vclass.classID = @classID 
+)
+select * from course
+select * from class
+select * from studentClassList
+select * from student
+select * from person
+
+exec getStudentList 12
