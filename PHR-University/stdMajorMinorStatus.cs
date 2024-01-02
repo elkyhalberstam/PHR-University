@@ -73,7 +73,7 @@ namespace PHR_University
             sqlCmd.ExecuteNonQuery();
 
             majorID = (int)dataset.Tables["MajorMinor"].Rows[0].ItemArray[0];
-            if (dataset.Tables["MajorMinor"].Rows[0].ItemArray[1].GetType().Equals(dataset.Tables["MajorMinor"].Rows[0].ItemArray[1].GetType()))
+            if ((int)dataset.Tables["MajorMinor"].Rows[0].ItemArray[1] != -1)
             { 
                    minorID = (int)dataset.Tables["MajorMinor"].Rows[0].ItemArray[1];
             }

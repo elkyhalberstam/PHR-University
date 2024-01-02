@@ -176,7 +176,7 @@ namespace PHR_University
             sqlCmd1 = new SqlCommand("updateBatchStatus", sqlCon);
             sqlCmd1.CommandType = CommandType.StoredProcedure;
             sqlCmd1.Parameters.Add("@studentID", System.Data.SqlDbType.VarChar).Value = studentID;
-            sqlCmd1.Parameters.Add("@batchStatus", System.Data.SqlDbType.VarChar).Value = GPA;
+            sqlCmd1.Parameters.Add("@batchStatus", System.Data.SqlDbType.VarChar).Value = batchStatus;
             sqlCmd1.ExecuteNonQuery();
             da1 = new SqlDataAdapter(sqlCmd1);
             dataset1 = new DataSet();
