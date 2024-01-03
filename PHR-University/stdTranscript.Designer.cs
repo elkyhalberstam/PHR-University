@@ -1,6 +1,6 @@
 ﻿namespace PHR_University
 {
-    partial class lookUpclasses
+    partial class stdTranscript
     {
         /// <summary>
         /// Required designer variable.
@@ -28,60 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.creditTarget = new System.Windows.Forms.TextBox();
+            this.totalCredits = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(416, 52);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(207, 28);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(139, 52);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(203, 28);
-            this.comboBox2.TabIndex = 1;
-            this.comboBox2.Visible = false;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 112);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 72);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(798, 337);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.Size = new System.Drawing.Size(800, 378);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // lookUpclasses
+            // creditTarget
+            // 
+            this.creditTarget.Location = new System.Drawing.Point(90, 33);
+            this.creditTarget.Name = "creditTarget";
+            this.creditTarget.Size = new System.Drawing.Size(280, 26);
+            this.creditTarget.TabIndex = 1;
+            this.creditTarget.Text = "Required Crudetis for Graduation: 120";
+            // 
+            // totalCredits
+            // 
+            this.totalCredits.Location = new System.Drawing.Point(390, 33);
+            this.totalCredits.Name = "totalCredits";
+            this.totalCredits.ReadOnly = true;
+            this.totalCredits.Size = new System.Drawing.Size(334, 26);
+            this.totalCredits.TabIndex = 2;
+            // 
+            // transcript
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.totalCredits);
+            this.Controls.Add(this.creditTarget);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Name = "lookUpclasses";
-            this.Text = "Form1";
+            this.Name = "transcript";
+            this.Text = "transcript";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox creditTarget;
+        private System.Windows.Forms.TextBox totalCredits;
     }
 }

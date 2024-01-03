@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace PHR_University
 {
-    public partial class lookUpclasses : Form
+    public partial class stdLookUpclasses : Form
     {
         SqlConnection sqlCon = null;
 
-        public lookUpclasses()
+        public stdLookUpclasses()
         {
             InitializeComponent();
             createDataBaseConnection();
@@ -48,10 +48,6 @@ namespace PHR_University
             return false;
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void populateLists()
         {
@@ -66,31 +62,16 @@ namespace PHR_University
 
             for (int i = 0; i < dataset.Tables[0].Rows.Count; i++)
             {
-                comboBox1.Items.Add(dataset.Tables[0].Rows[i].ItemArray[0]);
-            }
-
-
-            sqlCmd = new SqlCommand("getDepartmentList", sqlCon);
-            sqlCmd.CommandType = CommandType.StoredProcedure;
-            sqlCmd.ExecuteNonQuery();
-            da = new SqlDataAdapter(sqlCmd);
-            dataset = new DataSet();
-            da.Fill(dataset, "Department");
-            sqlCmd.ExecuteNonQuery();
-
-
-            for (int i = 0; i < dataset.Tables[0].Rows.Count; i++)
-            {
-                comboBox2.Items.Add(dataset.Tables[0].Rows[i].ItemArray[0]);
+                selectSemester.Items.Add(dataset.Tables[0].Rows[i].ItemArray[0]);
             }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            if (comboBox1.SelectedItem.ToString() != null)
+            if (selectSemester.SelectedItem.ToString() != null)
             { 
-                String name = comboBox1.SelectedItem.ToString();
+                String name = selectSemester.SelectedItem.ToString();
                 Console.WriteLine(name);
                 SqlCommand sqlCmd = new SqlCommand("getSemesterClasses", sqlCon);
                 sqlCmd.CommandType = CommandType.StoredProcedure;
