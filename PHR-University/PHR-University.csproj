@@ -47,6 +47,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AAcademicSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AAcademicSchedule.Designer.cs">
+      <DependentUpon>AAcademicSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addClassForm.Designer.cs">
+      <DependentUpon>addClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AEmailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AEmailForm.Designer.cs">
+      <DependentUpon>AEmailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="courseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="courseList.Designer.cs">
+      <DependentUpon>courseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="removeClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="removeClass.Designer.cs">
+      <DependentUpon>removeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trash.Designer.cs">
+      <DependentUpon>trash.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +133,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="addClassForm.resx">
+      <DependentUpon>addClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="courseList.resx">
+      <DependentUpon>courseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="removeClass.resx">
+      <DependentUpon>removeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trash.resx">
+      <DependentUpon>trash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </EmbeddedResource>

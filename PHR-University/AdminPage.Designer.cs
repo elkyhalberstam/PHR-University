@@ -1,6 +1,6 @@
 ﻿namespace PHR_University
 {
-    partial class AdminPage
+    partial class ARegistration
     {
         /// <summary>
         /// Required designer variable.
@@ -28,132 +28,211 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.HomePannel = new System.Windows.Forms.Panel();
+            this.ALabelPanel = new System.Windows.Forms.Panel();
+            this.ARegistrationButton = new System.Windows.Forms.Button();
+            this.AHomeButton = new System.Windows.Forms.Button();
+            this.ARegistartionPanel = new System.Windows.Forms.Panel();
+            this.dropButton = new System.Windows.Forms.Button();
+            this.AdminHomePanel = new System.Windows.Forms.Panel();
+            this.AAcademicButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.AEmailButton = new System.Windows.Forms.Button();
+            this.ARegistrationAddDropButton = new System.Windows.Forms.Button();
             this.homeLabel = new System.Windows.Forms.Label();
-            this.asButton = new System.Windows.Forms.Button();
-            this.courseButton = new System.Windows.Forms.Button();
-            this.emailButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.menueAcademics = new System.Windows.Forms.Button();
-            this.menuRegistratiom = new System.Windows.Forms.Button();
-            this.menuHome = new System.Windows.Forms.Button();
-            this.HomePannel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.ARegistartionAssignClassesButton = new System.Windows.Forms.Button();
+            this.ACourseSchedule = new System.Windows.Forms.Button();
+            this.ALabelPanel.SuspendLayout();
+            this.ARegistartionPanel.SuspendLayout();
+            this.AdminHomePanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // HomePannel
+            // ALabelPanel
             // 
-            this.HomePannel.BackColor = System.Drawing.SystemColors.Control;
-            this.HomePannel.Controls.Add(this.homeLabel);
-            this.HomePannel.Controls.Add(this.asButton);
-            this.HomePannel.Controls.Add(this.courseButton);
-            this.HomePannel.Controls.Add(this.emailButton);
-            this.HomePannel.Location = new System.Drawing.Point(0, 138);
-            this.HomePannel.Name = "HomePannel";
-            this.HomePannel.Size = new System.Drawing.Size(1200, 424);
-            this.HomePannel.TabIndex = 7;
+            this.ALabelPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ALabelPanel.Controls.Add(this.ARegistrationButton);
+            this.ALabelPanel.Controls.Add(this.AHomeButton);
+            this.ALabelPanel.Location = new System.Drawing.Point(1, 11);
+            this.ALabelPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.ALabelPanel.Name = "ALabelPanel";
+            this.ALabelPanel.Size = new System.Drawing.Size(800, 29);
+            this.ALabelPanel.TabIndex = 9;
+            // 
+            // ARegistrationButton
+            // 
+            this.ARegistrationButton.Location = new System.Drawing.Point(343, 2);
+            this.ARegistrationButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ARegistrationButton.Name = "ARegistrationButton";
+            this.ARegistrationButton.Size = new System.Drawing.Size(115, 25);
+            this.ARegistrationButton.TabIndex = 5;
+            this.ARegistrationButton.Text = "Registration";
+            this.ARegistrationButton.UseVisualStyleBackColor = true;
+            this.ARegistrationButton.Click += new System.EventHandler(this.AMenuRegistration_Click);
+            // 
+            // AHomeButton
+            // 
+            this.AHomeButton.Location = new System.Drawing.Point(39, 3);
+            this.AHomeButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AHomeButton.Name = "AHomeButton";
+            this.AHomeButton.Size = new System.Drawing.Size(115, 25);
+            this.AHomeButton.TabIndex = 4;
+            this.AHomeButton.Text = "Home";
+            this.AHomeButton.UseVisualStyleBackColor = true;
+            this.AHomeButton.Click += new System.EventHandler(this.AMenuHome_Click);
+            // 
+            // ARegistartionPanel
+            // 
+            this.ARegistartionPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.ARegistartionPanel.Controls.Add(this.AdminHomePanel);
+            this.ARegistartionPanel.Controls.Add(this.ARegistrationAddDropButton);
+            this.ARegistartionPanel.Controls.Add(this.homeLabel);
+            this.ARegistartionPanel.Controls.Add(this.ARegistartionAssignClassesButton);
+            this.ARegistartionPanel.Controls.Add(this.ACourseSchedule);
+            this.ARegistartionPanel.Controls.Add(this.dropButton);
+            this.ARegistartionPanel.Location = new System.Drawing.Point(1, 85);
+            this.ARegistartionPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.ARegistartionPanel.Name = "ARegistartionPanel";
+            this.ARegistartionPanel.Size = new System.Drawing.Size(800, 276);
+            this.ARegistartionPanel.TabIndex = 10;
+            this.ARegistartionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ARegistartionPannel_Paint);
+            // 
+            // dropButton
+            // 
+            this.dropButton.Location = new System.Drawing.Point(444, 158);
+            this.dropButton.Margin = new System.Windows.Forms.Padding(2);
+            this.dropButton.Name = "dropButton";
+            this.dropButton.Size = new System.Drawing.Size(115, 55);
+            this.dropButton.TabIndex = 12;
+            this.dropButton.Text = "Drop Class";
+            this.dropButton.UseVisualStyleBackColor = true;
+            this.dropButton.Click += new System.EventHandler(this.dropButton_Click);
+            // 
+            // AdminHomePanel
+            // 
+            this.AdminHomePanel.BackColor = System.Drawing.SystemColors.Control;
+            this.AdminHomePanel.Controls.Add(this.AAcademicButton);
+            this.AdminHomePanel.Controls.Add(this.label1);
+            this.AdminHomePanel.Controls.Add(this.AEmailButton);
+            this.AdminHomePanel.Location = new System.Drawing.Point(2, 2);
+            this.AdminHomePanel.Margin = new System.Windows.Forms.Padding(2);
+            this.AdminHomePanel.Name = "AdminHomePanel";
+            this.AdminHomePanel.Size = new System.Drawing.Size(800, 276);
+            this.AdminHomePanel.TabIndex = 11;
+            this.AdminHomePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminHomePanel_Paint);
+            // 
+            // AAcademicButton
+            // 
+            this.AAcademicButton.Location = new System.Drawing.Point(452, 156);
+            this.AAcademicButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AAcademicButton.Name = "AAcademicButton";
+            this.AAcademicButton.Size = new System.Drawing.Size(115, 55);
+            this.AAcademicButton.TabIndex = 4;
+            this.AAcademicButton.Text = "Academic";
+            this.AAcademicButton.UseVisualStyleBackColor = true;
+            this.AAcademicButton.Click += new System.EventHandler(this.AAcademicButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(245, 87);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(279, 46);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "ADMIN HOME";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // AEmailButton
+            // 
+            this.AEmailButton.Location = new System.Drawing.Point(227, 156);
+            this.AEmailButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AEmailButton.Name = "AEmailButton";
+            this.AEmailButton.Size = new System.Drawing.Size(115, 55);
+            this.AEmailButton.TabIndex = 0;
+            this.AEmailButton.Text = "Email";
+            this.AEmailButton.UseVisualStyleBackColor = true;
+            this.AEmailButton.Click += new System.EventHandler(this.AEmailButton_Click_1);
+            // 
+            // ARegistrationAddDropButton
+            // 
+            this.ARegistrationAddDropButton.Location = new System.Drawing.Point(288, 158);
+            this.ARegistrationAddDropButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ARegistrationAddDropButton.Name = "ARegistrationAddDropButton";
+            this.ARegistrationAddDropButton.Size = new System.Drawing.Size(115, 55);
+            this.ARegistrationAddDropButton.TabIndex = 4;
+            this.ARegistrationAddDropButton.Text = "Add Class";
+            this.ARegistrationAddDropButton.UseVisualStyleBackColor = true;
+            this.ARegistrationAddDropButton.Click += new System.EventHandler(this.AdminAddDropButton_Click);
             // 
             // homeLabel
             // 
             this.homeLabel.AutoSize = true;
             this.homeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeLabel.Location = new System.Drawing.Point(487, 132);
+            this.homeLabel.Location = new System.Drawing.Point(170, 89);
+            this.homeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.homeLabel.Name = "homeLabel";
-            this.homeLabel.Size = new System.Drawing.Size(210, 69);
+            this.homeLabel.Size = new System.Drawing.Size(457, 46);
             this.homeLabel.TabIndex = 3;
-            this.homeLabel.Text = "HOME";
+            this.homeLabel.Text = "ADMIN REGISTRATION";
+            this.homeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
             // 
-            // asButton
+            // ARegistartionAssignClassesButton
             // 
-            this.asButton.Location = new System.Drawing.Point(853, 243);
-            this.asButton.Name = "asButton";
-            this.asButton.Size = new System.Drawing.Size(173, 85);
-            this.asButton.TabIndex = 2;
-            this.asButton.Text = "Academic Schedule";
-            this.asButton.UseVisualStyleBackColor = true;
+            this.ARegistartionAssignClassesButton.Location = new System.Drawing.Point(587, 158);
+            this.ARegistartionAssignClassesButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ARegistartionAssignClassesButton.Name = "ARegistartionAssignClassesButton";
+            this.ARegistartionAssignClassesButton.Size = new System.Drawing.Size(115, 55);
+            this.ARegistartionAssignClassesButton.TabIndex = 2;
+            this.ARegistartionAssignClassesButton.Text = "Assign Class";
+            this.ARegistartionAssignClassesButton.UseVisualStyleBackColor = true;
+            this.ARegistartionAssignClassesButton.Click += new System.EventHandler(this.ARegistartionAssignClassesButton_Click);
             // 
-            // courseButton
+            // ACourseSchedule
             // 
-            this.courseButton.Location = new System.Drawing.Point(499, 243);
-            this.courseButton.Name = "courseButton";
-            this.courseButton.Size = new System.Drawing.Size(173, 85);
-            this.courseButton.TabIndex = 1;
-            this.courseButton.Text = "Course Schedule";
-            this.courseButton.UseVisualStyleBackColor = true;
+            this.ACourseSchedule.Location = new System.Drawing.Point(143, 158);
+            this.ACourseSchedule.Margin = new System.Windows.Forms.Padding(2);
+            this.ACourseSchedule.Name = "ACourseSchedule";
+            this.ACourseSchedule.Size = new System.Drawing.Size(115, 55);
+            this.ACourseSchedule.TabIndex = 0;
+            this.ACourseSchedule.Text = "Semester Schedule";
+            this.ACourseSchedule.UseVisualStyleBackColor = true;
+            this.ACourseSchedule.Click += new System.EventHandler(this.ACourseSchedule_Click);
             // 
-            // emailButton
+            // ARegistration
             // 
-            this.emailButton.Location = new System.Drawing.Point(171, 243);
-            this.emailButton.Name = "emailButton";
-            this.emailButton.Size = new System.Drawing.Size(173, 85);
-            this.emailButton.TabIndex = 0;
-            this.emailButton.Text = "Email";
-            this.emailButton.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.menueAcademics);
-            this.panel1.Controls.Add(this.menuRegistratiom);
-            this.panel1.Controls.Add(this.menuHome);
-            this.panel1.Location = new System.Drawing.Point(0, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 45);
-            this.panel1.TabIndex = 8;
-            // 
-            // menueAcademics
-            // 
-            this.menueAcademics.Location = new System.Drawing.Point(988, 3);
-            this.menueAcademics.Name = "menueAcademics";
-            this.menueAcademics.Size = new System.Drawing.Size(173, 39);
-            this.menueAcademics.TabIndex = 6;
-            this.menueAcademics.Text = "Academics";
-            this.menueAcademics.UseVisualStyleBackColor = true;
-            // 
-            // menuRegistratiom
-            // 
-            this.menuRegistratiom.Location = new System.Drawing.Point(514, 3);
-            this.menuRegistratiom.Name = "menuRegistratiom";
-            this.menuRegistratiom.Size = new System.Drawing.Size(173, 39);
-            this.menuRegistratiom.TabIndex = 5;
-            this.menuRegistratiom.Text = "Registration";
-            this.menuRegistratiom.UseVisualStyleBackColor = true;
-            // 
-            // menuHome
-            // 
-            this.menuHome.Location = new System.Drawing.Point(59, 5);
-            this.menuHome.Name = "menuHome";
-            this.menuHome.Size = new System.Drawing.Size(173, 39);
-            this.menuHome.TabIndex = 4;
-            this.menuHome.Text = "Home";
-            this.menuHome.UseVisualStyleBackColor = true;
-            // 
-            // AdminPage
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.HomePannel);
-            this.Name = "AdminPage";
-            this.Text = "AdminPage";
-            this.HomePannel.ResumeLayout(false);
-            this.HomePannel.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ARegistartionPanel);
+            this.Controls.Add(this.ALabelPanel);
+            this.Name = "ARegistration";
+            this.Text = "ARegistration";
+            this.Load += new System.EventHandler(this.ARegistration_Load);
+            this.ALabelPanel.ResumeLayout(false);
+            this.ARegistartionPanel.ResumeLayout(false);
+            this.ARegistartionPanel.PerformLayout();
+            this.AdminHomePanel.ResumeLayout(false);
+            this.AdminHomePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel HomePannel;
+        private System.Windows.Forms.Panel ALabelPanel;
+        private System.Windows.Forms.Button ARegistrationButton;
+        private System.Windows.Forms.Button AHomeButton;
+        private System.Windows.Forms.Panel ARegistartionPanel;
         private System.Windows.Forms.Label homeLabel;
-        private System.Windows.Forms.Button asButton;
-        private System.Windows.Forms.Button courseButton;
-        private System.Windows.Forms.Button emailButton;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button menueAcademics;
-        private System.Windows.Forms.Button menuRegistratiom;
-        private System.Windows.Forms.Button menuHome;
+        private System.Windows.Forms.Button ARegistartionAssignClassesButton;
+        private System.Windows.Forms.Button ACourseSchedule;
+        private System.Windows.Forms.Panel AdminHomePanel;
+        private System.Windows.Forms.Button AAcademicButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button AEmailButton;
+        private System.Windows.Forms.Button dropButton;
+        private System.Windows.Forms.Button ARegistrationAddDropButton;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PHR_University
 {
-    public partial class ProfessorPage : Form
+    public partial class AEmailForm : Form
     {
-        public ProfessorPage(int teacher)
+        public AEmailForm()
         {
             InitializeComponent();
         }
