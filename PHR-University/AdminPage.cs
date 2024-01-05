@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,40 +10,90 @@ using System.Windows.Forms;
 
 namespace PHR_University
 {
-    public partial class AdminPage : Form
+    public partial class ARegistration : Form
     {
-        SqlConnection sqlCon = null;
-        public AdminPage()
+        int adminID;
+        int semesterID;
+        public ARegistration(int admin)
         {
             InitializeComponent();
-            createDataBaseConnection();
-        
+            adminID = admin;
         }
 
-        private Boolean createDataBaseConnection()
+        private void ARegistration_Load(object sender, EventArgs e)
         {
-            try
-            {
-                /* get database parameters from App.config file */
-                string strServer = ConfigurationManager.AppSettings["server"];
-                string strDatabase = ConfigurationManager.AppSettings["database"];
-
-                /* open a connection to database */
-                //  typical connection string:
-                //   sqlCon = new SqlConnection("Server=DESKTOP-17VOE83;Database=Finance;Trusted_Connection=True;");
-                //string strConnect = $"Server={strServer};Database={strDatabase};Trusted_Connection=True;";
-                string strConnect = "Server=DESKTOP-2NS3C4L\\SQLEXPRESS;Database=SchoolSystem;Trusted_Connection=True;";
-
-                sqlCon = new SqlConnection(strConnect);
-                sqlCon.Open();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(" " + DateTime.Now.ToLongTimeString() + "  " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            return false;
+            InitializeComponent();
         }
 
+        private void homeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AMenuHome_Click(object sender, EventArgs e)
+        {
+            ARegistartionPanel.Hide();
+            AdminHomePanel.Show();
+        }
+
+        private void ACourseSchedule_Click(object sender, EventArgs e)
+        {
+            //show the entire list of courses including dates, times, location and professor
+            Form courseList = new courseList();
+            courseList.Show();
+        }
+
+        private void AdminAddDropButton_Click(object sender, EventArgs e)
+        {
+            //open add/drop form
+            //need to be able to add drop people and classes
+            //get classID, either remove or add
+            Form addClass = new addClassForm(adminID);
+            addClass.Show();
+            //Form classForm = new removeClass(adminID);
+            //classForm.Show();
+
+        }
+
+        private void ARegistartionAssignClassesButton_Click(object sender, EventArgs e)
+        {
+            //assign class and room
+        }
+
+        private void AMenuRegistration_Click(object sender, EventArgs e)
+        {
+            ARegistartionPanel.Show();
+            AdminHomePanel.Hide();
+        }
+
+        private void AEmailButton_Click_1(object sender, EventArgs e)
+        {
+            //open new email form
+            Form showEmail = new AEmailForm();
+            showEmail.Show();
+        }
+
+        private void AAcademicButton_Click(object sender, EventArgs e)
+        {
+            //show the academic form (any info?)
+            Form showAcademicForm = new AAcademicSchedule();
+            showAcademicForm.Show();
+        }
+
+        private void ARegistartionPannel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AdminHomePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dropButton_Click(object sender, EventArgs e)
+        {
+            Form removeClassForm = new removeClass(adminID);
+            removeClassForm.Show();
+        }
     }
 }

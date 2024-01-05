@@ -12,7 +12,7 @@ namespace PHR_University
 {
     public partial class StudentPage : Form
     {
-        public StudentPage()
+        public StudentPage(int student)
         {
             InitializeComponent();
             
